@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <meta content='IE=edge' http-equiv=X-UA-Compatible>
+  <title>Lookr</title>
+  <meta content='width=device-width, initial-scale=1' name=viewport>
+
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link href="vendor/bootstrap-4.1.3-dist/css/bootstrap.min.css" rel=stylesheet />
+  <link href="css/app.css" rel=stylesheet />
+  <link href="css/header_effects.css" rel=stylesheet />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="vendor/js/parallax.min.js"></script>
+
+  <script src="vendor/HeaderEffects/js/waypoints.min.js"></script>
+
+  <!-- sidebar -->
+  <link rel="stylesheet" href="vendor/sidebar/css/jquery.mobilemenu.css">
+  <script id="mobilemenu" src="vendor/sidebar/js/jquery.mobilemenu.js"></script>
+</head>
+<body>
+  <header class="header-effects">
+    <div class="header">
+      <div class="h-100 d-flex align-items-center">
+        <img class="logo_img logo_img-lookr" src="images/lookr_logo.svg" alt="Lookr" />
+        <button type="button" class="btn btn-link d-lg-block d-none">
+          <img class="products_img" src="images/products_icon.svg" alt="kabob products" />
+        </button>
+      </div>
+
+      <div id="mobilemenu" class="mobilemenu_override">
+        <div class="mobilemenu-wrapper">
+          <div class="mobilemenu-trigger">
+            <button class="trigger">
+              <span class="box">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+              </span>
+            </button>
+          </div>
+          <div class="mobilemenu-view">
+            <nav class="header_menu_style">
+              <div class="header_menu_spacing">
+                <ul>
+                  <li class="nav_item">
+                    <a href="#" class="text-white">新聞</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="#" class="text-white">產品</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="#" class="text-white">方案</a>
+                  </li>
+                  <li class="nav_item desktop-only">
+                    <a href="" class="btn text-white mx-2 header_button-md header_button-lookr">開啟平台</a>
+                  </li>
+                  <li class="nav_item">
+                      <a href="#" class="text-white">註冊</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="#" class="text-white">登入</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mobile-only header_menu_bottom d-flex align-items-center">
+                <div class="i18n_selector">
+                  <select class="select">
+                    <option>繁體中文</option>
+                    <option>簡體中文</option>
+                    <option>English</option>
+                    <option>日本語</option>
+                  </select>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="d-flex flex-wrap justify-content-center section-kv section-kv-lookr kv_fonts pt_for_header">
+      <div class="kv_desc">
+        <h1 class="kv_fonts-title mx-auto mb-4">
+          實現你的<br>數位看板計畫
+        </h1>
+        <p>
+          無限可能的數位看板內容
+        </p>
+      </div>
+      <div class="kv_images">
+        <img class="kv_image" src="images/main_img_lookr.png">
+      </div>
+    </section>
+
+    <section class="bg-white section-lg ha-waypoint" data-animate-down="header-ready" data-animate-up="none">
+      <div class="section_px">
+        <h3 class="h3_fonts text-center mb-2 pb-1">
+          <span class="d-inline-block">Lookr</span>
+          <span class="d-inline-block">數位看板雲端服務</span>
+        </h3>
+        <p class="desc_fonts w-75 mx-auto text-center">
+          <span class="d-inline-block">電視盒、平板電腦、</span>
+          <span class="d-inline-block">隨便你想用的顯示器</span>
+          <br>
+          <span class="d-inline-block">按下內容發佈，畫面立即更新</span>
+        </p>
+      </div>
+      <div class="mx-auto lookr_intro_images_w lookr_intro_images_mt">
+        <div class="mx-auto lookr_intro_images">
+          <figure class="figure-left">
+            <figcaption class="figcaption">
+              <h4 class="figtitle h4_fonts">管理後台</h4>
+              Lookr.cc 網站
+            </figcaption>
+            <img src="images/lookr_image_notebook.png" alt="管理後台 Lookr.cc 網站" class="img-fluid">
+          </figure>
+          <div class="figure-center">
+            <img src="images/lookr_image_signal.png" alt="發送" class="img-fluid">
+          </div>
+          <figure class="figure-right">
+            <figcaption class="figcaption">
+              <h4 class="figtitle h4_fonts">內容播放器</h4>
+              Android APP
+            </figcaption>
+            <img src="images/lookr_image_devices.png" alt="內容播放器 Android APP" class="img-fluid">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-md text-white section_px parallax-window" data-parallax="scroll" data-image-src="./images/lookr_bg.png" data-bleed="10">
+      <h3 class="h4_fonts text-center mb-5 mb-md-4 pb-md-2">馬上試用看看</h3>
+      <figure class="text-center mx-auto mb-5 mb-md-4 pb-md-2 lookr_screens_figure">
+        <img src="images/lookr_screens_img.png" class="img-fluid" >
+      </figure>
+      <div class="text-center">
+        <a href="" class="btn btn-info btn-size">註冊帳號</a>
+      </div>
+    </section>
+
+    <section class="section-lg section_px lookr_bg-milk ha-waypoint" data-animate-down="header-show" data-animate-up="header-hide">
+      <div class="section_header_mb">
+        <h3 class="h3_fonts text-center mb-2 pb-1">
+          <span class="d-inline-block">簡單上手的</span><span class="d-inline-block">管理介面</span>
+        </h3>
+        <p class="desc_fonts w-75 mx-auto mb-5 text-center">
+          <span class="d-inline-block">統一介面管理裝置與內容</span>
+          <br>
+          <span class="d-inline-block">提供自訂內容的彈性，</span>
+          <span class="d-inline-block">同時具備規模化的系統管理</span>
+        </p>
+      </div>
+
+      <section class="lookr_feature_mb">
+        <div class="d-lg-flex justify-content-center">
+          <h4 class="h4_fonts pb-1 lookr_feature_title">
+            編輯內容
+          </h4>
+          <p class="desc_fonts lookr_feature_desc mb-4 pb-md-3">
+            Lookr 以區塊組裝的方式呈現內容，水平6種、直立3種區塊版型，並支援跑馬文字與RSS
+            <br><br>
+            區塊內容支援：圖片影片輪播、氣象時鐘、離線瀏覽器、Lookr 插件
+          </p>
+        </div>
+        <figure class="mx-auto lookr_feature_figure">
+          <img src="images/lookr_feature_1.png" class="img-fluid feature_img_shadow">
+        </figure>
+      </section>
+
+      <section class="lookr_feature_mb">
+        <div class="d-lg-flex justify-content-center">
+          <h4 class="h4_fonts pb-1 lookr_feature_title">
+            內容排程
+          </h4>
+          <p class="desc_fonts lookr_feature_desc mb-4 pb-md-3">
+            支援定時更新內容，安排時段播放清單
+            <br>
+            可預先設定多檔活動，同時控制不同螢幕的輪播內容
+          </p>
+        </div>
+        <figure class="mx-auto lookr_feature_figure">
+          <img src="images/lookr_feature_2.png" class="img-fluid feature_img_shadow">
+        </figure>
+      </section>
+
+      <section class="lookr_feature_mb-last">
+        <div class="d-lg-flex justify-content-center">
+          <h4 class="h4_fonts pb-1 lookr_feature_title">
+            裝置管理
+          </h4>
+          <p class="desc_fonts lookr_feature_desc mb-4 pb-md-3">
+            視覺化裝置管理，一眼掌握所有裝置的連線狀態
+            <br>
+            可以設定群組，輕鬆發佈多組裝置
+          </p>
+        </div>
+        <figure class="mx-auto lookr_feature_figure">
+          <img src="images/lookr_feature_3.png" class="img-fluid feature_img_shadow">
+        </figure>
+      </section>
+    </section>
+
+    <section class="section-lg text-white lookr_bg-dark">
+      <div class="text-left text-md-center section_px">
+        <h3 class="h3_fonts mb-2 pb-1">
+          Lookr 插件
+        </h3>
+        <p class="desc_fonts mb-5">
+          <span class="d-inline-block">Lookr 提供許多官方開發或與第三方合作的應用程式，解決各式各樣的門店需要。</span>
+          <br>
+          <span class="d-inline-block">動態菜單、叫號器等，簡單設定即可開始使用！</span>
+        </p>
+      </div>
+
+      <div class="lookr_widgets_scrollable section_px">
+        <ul class="lookr_widgets">
+          <li class="lookr_widget_item highlight">
+            <div class="mb-3">
+              <button id="widget1" type="button" class="btn lookr_widget_tab">
+                <i class="widget_tab_icon widget_tab_1"></i>
+              </button>
+            </div>
+            <label for="widget1">叫號取餐</label>
+          </li>
+          <li class="lookr_widget_item">
+            <div class="mb-3">
+              <button id="widget2" type="button" class="btn lookr_widget_tab">
+                <i class="widget_tab_icon widget_tab_2"></i>
+              </button>
+            </div>
+            <label for="widget2">動態價格牌</label>
+          </li>
+          <li class="lookr_widget_item">
+            <div class="mb-3">
+              <button id="widget3" type="button" class="btn lookr_widget_tab">
+                <i class="widget_tab_icon widget_tab_3"></i>
+              </button>
+            </div>
+            <label for="widget3">排隊叫號</label>
+          </li>
+          <li class="lookr_widget_item">
+            <div class="mb-3">
+              <button id="widget4" type="button" class="btn lookr_widget_tab">
+                <i class="widget_tab_icon widget_tab_4"></i>
+              </button>
+            </div>
+            <label for="widget4">工單派件</label>
+          </li>
+          <li class="lookr_widget_item">
+            <div class="mb-3">
+              <button id="widget5" type="button" class="btn lookr_widget_tab">
+                <i class="widget_tab_icon widget_tab_5"></i>
+              </button>
+            </div>
+            <label for="widget5">螢幕拼接</label>
+          </li>
+        </ul>
+      </div>
+      <script>
+        $('.lookr_widget_item').click(function(e) {
+          $('.lookr_widget_item').removeClass('highlight');
+          $(e.currentTarget).addClass('highlight');
+          var widgetName = e.currentTarget.querySelector('.lookr_widget_tab').id;
+          $('#lookr_widget_screenshots').attr('data-show', widgetName + '_screenshot');
+        });
+      </script>
+
+      <div id="lookr_widget_screenshots" data-show="widget1_screenshot">
+        <div id="widget1_screenshot">
+          <img src="images/lookr_widget1_screenshot.png" alt="叫號取餐" >
+        </div>
+        <div id="widget2_screenshot">
+          <img src="images/lookr_widget2_screenshot.png" alt="動態價格牌">
+        </div>
+        <div id="widget3_screenshot">
+          <img src="images/lookr_widget3_screenshot.png" alt="排隊叫號">
+        </div>
+        <div id="widget4_screenshot">
+          <img src="images/lookr_widget4_screenshot.png" alt="工單派件">
+        </div>
+        <div id="widget5_screenshot">
+          <img src="images/lookr_widget5_screenshot.png" alt="螢幕拼接">
+        </div>
+      </div>
+    </section>
+
+    <section class="section-md lookr_bg-milk">
+      <h3 class="h3_fonts text-center h3_mb">盼盼的使用者</h3>
+      <div class="pb-lg-3"></div>
+
+      <div class="d-flex justify-content-center flex-wrap">
+        <div class="d-flex justify-content-center mb-4 pb-1 ml-3 mr-3 ml-md-4 mr-md-4">
+          <figure class="lookr_user_figure mr-3 mr-md-4">
+            <div class="lookr_user_logo-round">
+              <img src="images/lookr_logo.png" class="img-fluid">
+            </div>
+            <figcaption class="lookr_user_figcaption">Store Name</figcaption>
+          </figure>
+          <figure class="lookr_user_figure ml-3 ml-md-4">
+            <div class="lookr_user_logo-round">
+              <img src="images/lookr_logo.png" class="img-fluid">
+            </div>
+            <figcaption class="lookr_user_figcaption">Store Name</figcaption>
+          </figure>
+        </div>
+
+        <div class="d-flex justify-content-center mb-4 pb-1 ml-3 mr-3 ml-md-4 mr-md-4">
+          <figure class="lookr_user_figure mr-3 mr-md-4">
+            <div class="lookr_user_logo-round">
+              <img src="images/lookr_logo.png" class="img-fluid">
+            </div>
+            <figcaption class="lookr_user_figcaption">Store Name</figcaption>
+          </figure>
+          <figure class="lookr_user_figure ml-3 ml-md-4">
+            <div class="lookr_user_logo-round">
+              <img src="images/lookr_logo.png" class="img-fluid">
+            </div>
+            <figcaption class="lookr_user_figcaption">Store Name</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-lg">
+      <h3 class="h3_fonts text-center h3_mb">使用方案</h3>
+      <div class="d-flex flex-wrap justify-content-center pricing_plan_vpadding_fix">
+        <div class="d-flex flex-wrap justify-content-center">
+          <section class="pricing_plan">
+            <div class="main_info">
+              <h4 class="title">FREE</h4>
+              <div class="price">
+                <span class="text-price">FREE</span>
+              </div>
+              <div>
+                <a href="" class="choose_button">Choose</a>
+              </div>
+            </div>
+            <div>
+              <p class="feature">
+                This is a feature
+              </p>
+              <p class="feature">
+                This is another feature
+              </p>
+              <p class="feature">
+                Even another feature
+              </p>
+            </div>
+          </section>
+          <section class="pricing_plan">
+            <div class="main_info lookr">
+              <h4 class="title">ZERO</h4>
+              <div class="price">
+                <span class="text-price">$3000</span><span class="text-slash">/</span><span class="text-unit">20 units</span>
+              </div>
+              <div>
+                <a href="" class="choose_button">Choose</a>
+              </div>
+            </div>
+            <div>
+              <p class="feature">
+                This is a feature
+              </p>
+              <p class="feature">
+                This is another feature
+              </p>
+              <p class="feature">
+                Even another feature
+              </p>
+              <p class="feature">
+                This is a feature
+              </p>
+              <p class="feature">
+                This is another feature
+              </p>
+              <p class="feature">
+                Even another feature
+              </p>
+            </div>
+          </section>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center">
+          <section class="pricing_plan">
+            <div class="main_info">
+              <h4 class="title">GO</h4>
+              <div class="price">
+                <span class="text-price">N/A</span><span class="text-slash">/</span><span class="text-unit">year</span>
+              </div>
+              <div>
+                <a href="" class="choose_button">Contact us</a>
+              </div>
+            </div>
+            <div>
+              <p class="feature">
+                This is a feature
+              </p>
+              <p class="feature">
+                This is another feature
+              </p>
+              <p class="feature">
+                Even another feature
+              </p>
+            </div>
+          </section>
+          <section class="pricing_plan">
+            <div class="main_info">
+              <h4 class="title">RUN</h4>
+              <div class="price">
+                <span class="text-price">N/A</span><span class="text-slash">/</span><span class="text-unit">year</span>
+              </div>
+              <div>
+                <a href="" class="choose_button">Contact us</a>
+              </div>
+            </div>
+            <div>
+              <p class="feature">
+                This is a feature
+              </p>
+              <p class="feature">
+                This is another feature
+              </p>
+              <p class="feature">
+                Even another feature
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer footer-lookr">
+      <div class="mb-5 pb-2 mb-md-3 pb-md-1">
+        <img src="images/kabob_logo.svg" class="float-left">
+
+        <ul class="text-right">
+          <li class="mb-3 mb-md-0 d-md-inline-block ml-md-4 pl-md-1">
+            <a href="#" class="link-white">聯絡我們</a>
+          </li>
+          <li class="mb-3 mb-md-0 d-md-inline-block ml-md-4 pl-md-1">
+            <a href="#" class="link-white">使用手冊</a>
+          </li>
+          <li class="mb-3 mb-md-0 d-md-inline-block ml-md-4 pl-md-1">
+            <a href="#" class="link-white">隱私政策</a>
+          </li>
+          <li class="d-md-inline-block ml-md-4 pl-md-1">
+            <a href="#" class="link-white">服務條款</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="text-right mb-3 mb-md-3 pb-md-1">
+        <a href="tel:" class="footer-button">
+          <image src="images/call_btn.svg">
+        </a>
+        <a href="mailto:hello@kabob.cc" class="footer-button">
+          <image src="images/mail_btn.svg">
+        </a>
+      </div>
+
+      <div class="copyright_fonts text-white text-center text-md-right">
+        2017 Copyright of Kabob Creative Co. Limited
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/header_effects.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+  </script>
+  <script>
+    $(window).ready(function(){
+      $.mobilemenu()
+    });
+  </script>
+
+</body>
+</html>

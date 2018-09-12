@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="20px" viewBox="0 0 25 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>hanburger</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="mockup" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="VoicerWebsite-mockup-mobile" transform="translate(-276.000000, -21.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="section-intro">
+                <g id="hanburger" transform="translate(277.000000, 20.000000)">
+                    <polygon id="Line-2" points="-0.178571429 3.49579832 -0.178571429 1.49579832 23.1785714 1.49579832 23.1785714 3.49579832"></polygon>
+                    <polygon id="Line-2" points="-0.178571429 11.8151261 -0.178571429 9.81512605 23.1785714 9.81512605 23.1785714 11.8151261"></polygon>
+                    <polygon id="Line-2" points="-0.178571429 20.1344538 -0.178571429 18.1344538 23.1785714 18.1344538 23.1785714 20.1344538"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

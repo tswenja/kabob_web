@@ -1,0 +1,10 @@
+# General macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map

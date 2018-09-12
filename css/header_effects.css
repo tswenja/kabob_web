@@ -1,0 +1,30 @@
+.header-effects.header-effects-on {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+  .header-ready .header,
+  .header-hide .header
+  {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  .header-show .header
+  {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  .header-hide .header,
+  .header-show .header
+  {
+    -webkit-transition: transform 0.6s ease;
+    -moz-transition: transform 0.6s ease;
+    transition: transform 0.6s ease;
+  }

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery gab-mobilemenu Demo</title>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/jquery.mobilemenu.css">
+
+	<!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script id="mobilemenu" src="js/jquery.mobilemenu.js"></script>
+
+	
+	
+</head>
+<body style="background-color: #E95515">
+	
+	<div id="mobilemenu">
+  <div class="mobilemenu-wrapper">
+    <div class="mobilemenu-trigger">
+      <button class="trigger">
+        <span class="box">
+          <span class="bar top"></span>
+          <span class="bar middle"></span>
+          <span class="bar bottom"></span>
+        </span>
+      </button>
+    </div>
+    <div class="mobilemenu-view">
+      <div class="menu">
+        <ul class="navaccordion">
+          <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+          <li> <a href="#"><i class="fa fa-envelope"></i> About Us</a></li>
+          <li><a href="#"><i class="fa fa-book"></i> Product and Services</a></li>
+          <li><a href="#"><i class="fa fa-user"></i> Bet Types</a></li>
+          <li><a href="#"><i class="fa fa-cogs"></i> Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+  </script>
+
+
+  <script src="js/waypoints.min.js"></script>
+
+  <script>
+      var $head = $( '#ha-header' );
+      $( '.ha-waypoint' ).each( function(i) {
+        var $el = $( this ),
+          animClassDown = $el.data( 'animateDown' ),
+          animClassUp = $el.data( 'animateUp' );
+
+        $el.waypoint( function( direction ) {
+          if( direction === 'down' && animClassDown ) {
+            $head.attr('class', 'ha-header ' + animClassDown);
+          }
+          else if( direction === 'up' && animClassUp ){
+            $head.attr('class', 'ha-header ' + animClassUp);
+          }
+        }, { offset: '100%' } );
+      } );
+  </script>
+  
+	<script>
+		$(window).ready(function(){
+			$.mobilemenu()
+		});
+	</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

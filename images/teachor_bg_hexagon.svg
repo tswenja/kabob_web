@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="290px" height="332px" viewBox="0 0 290 332" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>teachor_bg_2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="teachor_mockup_detailed" transform="translate(-339.000000, -3540.000000)" fill="#0F2596">
+            <g id="section04" transform="translate(0.000000, 1864.000000)">
+                <g id="Group" transform="translate(339.000000, 1676.000000)">
+                    <path d="M152.5,2.84355851 L282.5,77.8990935 C287.141016,80.5785854 290,85.5304907 290,90.8894746 L290,241.000545 C290,246.359528 287.141016,251.311434 282.5,253.990926 L152.5,329.046461 C147.858984,331.725953 142.141016,331.725953 137.5,329.046461 L7.5,253.990926 C2.85898385,251.311434 6.82121026e-13,246.359528 6.60804744e-13,241.000545 L5.54223334e-13,90.8894746 C5.43565193e-13,85.5304907 2.85898385,80.5785854 7.5,77.8990935 L137.5,2.84355851 C142.141016,0.164066589 147.858984,0.164066589 152.5,2.84355851 Z" id="teachor_bg_2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
