@@ -40,6 +40,7 @@ $color-voicer: #f9ae0f
 
 .header
   position: fixed
+  z-index: 10
   width: 100%
   height: $header_height
   padding: 0 20px
@@ -120,6 +121,8 @@ $header_menu_bottom_height: 88px
     margin-bottom: -$header_menu_bottom_height
 
   .header_menu_bottom
+    position: fixed
+    bottom: 0
     width: 100%
     height: $header_menu_bottom_height
     background-color: $color-nav-bg
