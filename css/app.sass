@@ -35,6 +35,10 @@ $color-voicer: #f9ae0f
   max-width: 230px
 
 
+.headbar
+  height: $header_height
+  padding: 0 20px
+
 .pt_for_header
   padding-top: $header_height
 
@@ -43,7 +47,6 @@ $color-voicer: #f9ae0f
   z-index: 10
   width: 100%
   height: $header_height
-  padding: 0 20px
   .logo_img
     height: 19px
     z-index: 20
@@ -53,11 +56,16 @@ $color-voicer: #f9ae0f
     height: 12px
     opacity: 0.2
 
+  &.mobilemenu-active
+    height: auto
+    top: 0
+    bottom: 0
+
   @include breakpoint(desktop)
     position: absolute
 
 .header-effects-on
-  .header
+  .headbar
     background-color: $color-nav-bg
   .header_button-lookr,
   .header_button-voicer,

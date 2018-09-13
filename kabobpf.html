@@ -27,11 +27,13 @@
 <body>
   <header class="header-effects">
     <div class="header">
-      <div class="h-100 d-flex align-items-center">
-        <img class="logo_img" src="images/kabob_logo.svg" alt="Lookr" />
-        <button type="button" class="btn btn-link d-lg-block d-none">
-          <img class="products_img" src="images/products_icon.svg" alt="kabob products" />
-        </button>
+      <div class="headbar">
+        <div class="h-100 d-flex align-items-center">
+          <img class="logo_img" src="images/kabob_logo.svg" alt="Lookr" />
+          <button type="button" class="btn btn-link d-lg-block d-none">
+            <img class="products_img" src="images/products_icon.svg" alt="kabob products" />
+          </button>
+        </div>
       </div>
 
       <div id="mobilemenu" class="mobilemenu_override">
@@ -476,6 +478,17 @@
   <script>
     $(window).ready(function(){
       $.mobilemenu()
+
+      $('#mobilemenu button.trigger').click(function() {
+        if ( this.classList.contains('active') ) {
+          document.querySelector('header .header').classList.add('mobilemenu-active')
+        }
+        else {
+          setTimeout( function() {
+            document.querySelector('header .header').classList.remove('mobilemenu-active')
+          }, 500);
+        }
+      });
     });
   </script>
   <script>
