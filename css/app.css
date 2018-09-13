@@ -41,6 +41,9 @@ button {
 .img-cover {
   object-fit: cover; }
 
+.overflow-hidden {
+  overflow: hidden; }
+
 @media only screen and (max-width: 1023px) {
   .desktop-only {
     display: none !important; } }
