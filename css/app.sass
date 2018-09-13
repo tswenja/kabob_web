@@ -47,6 +47,8 @@ $color-voicer: #f9ae0f
   .logo_img
     height: 19px
     z-index: 20
+  .logo_font
+    z-index: 20
   .products_img
     height: 12px
     opacity: 0.2
@@ -121,7 +123,7 @@ $header_menu_bottom_height: 88px
     margin-bottom: -$header_menu_bottom_height
 
   .header_menu_bottom
-    position: fixed
+    position: absolute
     bottom: 0
     width: 100%
     height: $header_menu_bottom_height
@@ -183,7 +185,8 @@ $header_menu_bottom_height: 88px
         transition-delay: 0s, 0s
 
 #mobilemenu.mobilemenu_override
-  height: 100vh
+  height: auto
+  bottom: 0
   background-color: $color-nav-bg
   .mobilemenu-trigger > .trigger
     outline: none
