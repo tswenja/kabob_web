@@ -5,6 +5,8 @@ $( '.ha-waypoint' ).each( function(i) {
     animClassUp = $el.data( 'animateUp' );
 
   $el.waypoint( function( direction ) {
+    if ( $('#mobilemenu button.trigger.active').length > 0 ) return;
+
     if( direction === 'down' && animClassDown ) {
       if ( animClassDown === 'none' )
         $head.attr('class', "header-effects");
