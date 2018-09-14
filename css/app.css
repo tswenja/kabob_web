@@ -285,6 +285,7 @@ html, body {
       transition: background-color 0.4s, width 0s;
       transition-delay: 0s, 0s; } }
 .mobilemenu_override.mobilemenu-active .header {
+  position: fixed;
   height: auto;
   top: 0;
   bottom: 0; }
