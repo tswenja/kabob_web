@@ -18,6 +18,11 @@ figure {
   .link-white:hover, .link-white.hover {
     opacity: 0.8; }
 
+.hover-fade-in, .hover-fade-in:visited {
+  opacity: 0.7; }
+  .hover-fade-in:hover, .hover-fade-in:active, .hover-fade-in:focus, .hover-fade-in:visited:hover, .hover-fade-in:visited:active, .hover-fade-in:visited:focus {
+    opacity: 1; }
+
 button {
   cursor: pointer; }
 
