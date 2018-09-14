@@ -350,6 +350,9 @@ html, body {
     .h4_fonts {
       font-size: 32px; } }
 
+.section-md, .section-lg, .section-kv {
+  overflow-x: hidden; }
+
 .section-md {
   padding-top: 40px;
   padding-bottom: 40px; }
