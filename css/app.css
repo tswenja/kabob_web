@@ -141,22 +141,15 @@ html, body {
   padding-top: 64px; }
 
 .header {
-  position: fixed;
+  position: absolute;
   z-index: 10;
   width: 100%;
   height: 64px; }
   .header .logo_img {
-    height: 19px;
-    z-index: 20; }
-  .header .logo_font {
-    z-index: 20; }
+    height: 19px; }
   .header .products_img {
     height: 12px;
     opacity: 0.2; }
-  .header.mobilemenu-active {
-    height: auto;
-    top: 0;
-    bottom: 0; }
   @media only screen and (min-width: 1024px) {
     .header {
       position: absolute; } }
@@ -286,25 +279,38 @@ html, body {
     body.nav_transition.nav_in .header_menu_toggler::before {
       transition: background-color 0.4s, width 0s;
       transition-delay: 0s, 0s; } }
-#mobilemenu.mobilemenu_override {
+.mobilemenu_override.mobilemenu-active .header {
+  height: auto;
+  top: 0;
+  bottom: 0; }
+.mobilemenu_override.mobilemenu-active .headbar {
+  position: relative;
+  z-index: 30; }
+@media only screen and (min-width: 1024px) {
+  .mobilemenu_override .mobilemenu-trigger {
+    display: none; } }
+.mobilemenu_override .mobilemenu-trigger > .trigger {
+  outline: none; }
+  .mobilemenu_override .mobilemenu-trigger > .trigger.active > .box > .bar {
+    background-color: #ffffff; }
+.mobilemenu_override #mobilemenu {
   height: auto;
   bottom: 0;
   background-color: #292929; }
-  #mobilemenu.mobilemenu_override .mobilemenu-trigger > .trigger {
-    outline: none; }
-    #mobilemenu.mobilemenu_override .mobilemenu-trigger > .trigger.active > .box > .bar {
-      background-color: #ffffff; }
   @media only screen and (min-width: 1024px) {
-    #mobilemenu.mobilemenu_override {
+    .mobilemenu_override #mobilemenu {
       display: block;
       position: absolute;
       top: 0;
       right: 0;
       height: 64px;
       background: none;
-      box-shadow: none; }
-      #mobilemenu.mobilemenu_override .mobilemenu-trigger {
-        display: none; } }
+      box-shadow: none;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -ms-transition: none;
+      -o-transition: none;
+      transition: none; } }
 
 .footer {
   padding: 40px 35px; }

@@ -43,23 +43,15 @@ $color-voicer: #f9ae0f
   padding-top: $header_height
 
 .header
-  position: fixed
+  position: absolute
   z-index: 10
   width: 100%
   height: $header_height
   .logo_img
     height: 19px
-    z-index: 20
-  .logo_font
-    z-index: 20
   .products_img
     height: 12px
     opacity: 0.2
-
-  &.mobilemenu-active
-    height: auto
-    top: 0
-    bottom: 0
 
   @include breakpoint(desktop)
     position: absolute
@@ -192,25 +184,38 @@ $header_menu_bottom_height: 88px
         transition: background-color 0.4s, width 0s
         transition-delay: 0s, 0s
 
-#mobilemenu.mobilemenu_override
-  height: auto
-  bottom: 0
-  background-color: $color-nav-bg
-  .mobilemenu-trigger > .trigger
-    outline: none
-    &.active > .box > .bar
-      background-color: #ffffff
+.mobilemenu_override
+  &.mobilemenu-active
+    .header
+      height: auto
+      top: 0
+      bottom: 0
+    .headbar
+      position: relative
+      z-index: 30
 
-  @include breakpoint(desktop)
-    display: block
-    position: absolute
-    top: 0
-    right: 0
-    height: $header_height
-    background: none
-    box-shadow: none
-    .mobilemenu-trigger
+  .mobilemenu-trigger
+    @include breakpoint(desktop)
       display: none
+    & > .trigger
+      outline: none
+      &.active > .box > .bar
+        background-color: #ffffff
+
+  #mobilemenu
+    height: auto
+    bottom: 0
+    background-color: $color-nav-bg
+
+    @include breakpoint(desktop)
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      height: $header_height
+      background: none
+      box-shadow: none
+      +css3-prefix( transition, none )
 
 
 .footer

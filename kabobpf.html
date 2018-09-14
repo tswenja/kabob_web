@@ -25,31 +25,35 @@
   <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 </head>
 <body>
-  <header class="header-effects">
-    <div class="header">
+  <header class="mobilemenu_override">
+    <div class="header-effects"><div class="header">
+
       <div class="headbar">
         <div class="h-100 d-flex align-items-center">
           <img class="logo_img" src="images/kabob_logo.svg" alt="Lookr" />
           <button type="button" class="btn btn-link d-lg-block d-none">
             <img class="products_img" src="images/products_icon.svg" alt="kabob products" />
           </button>
+
+          <div class="ml-auto">
+            <div class="mobilemenu-trigger ml-auto">
+              <button class="trigger">
+                <span class="box">
+                  <span class="bar top"></span>
+                  <span class="bar middle"></span>
+                  <span class="bar bottom"></span>
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div id="mobilemenu" class="mobilemenu_override">
+      <div id="mobilemenu">
         <div class="mobilemenu-wrapper">
-          <div class="mobilemenu-trigger">
-            <button class="trigger">
-              <span class="box">
-                <span class="bar top"></span>
-                <span class="bar middle"></span>
-                <span class="bar bottom"></span>
-              </span>
-            </button>
-          </div>
           <div class="mobilemenu-view">
             <nav class="header_menu_style">
-              <div class="header_menu_spacing">
+                <div class="header_menu_spacing d-flex align-items-center">
                 <ul>
                   <li class="nav_item">
                     <a href="#" class="text-white">新聞</a>
@@ -86,7 +90,8 @@
           </div>
         </div>
       </div>
-    </div>
+
+    </div></div>
   </header>
 
   <main class="main">
@@ -480,17 +485,9 @@
   </script>
   <script>
     $(window).ready(function(){
-      $.mobilemenu()
-
-      $('#mobilemenu button.trigger').click(function() {
-        if ( this.classList.contains('active') ) {
-          document.querySelector('header .header').classList.add('mobilemenu-active')
-        }
-        else {
-          setTimeout( function() {
-            document.querySelector('header .header').classList.remove('mobilemenu-active')
-          }, 500);
-        }
+      $.mobilemenu({
+        container: '.mobilemenu_override',
+        trigger: '.mobilemenu-trigger button.trigger'
       });
     });
   </script>

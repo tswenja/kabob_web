@@ -1,3 +1,87 @@
+.mobilemenu-trigger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 59px;
+    line-height: 59px;
+    z-Index: 2;
+    cursor: pointer;
+}
+
+.mobilemenu-trigger button {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.mobilemenu-trigger button span.box {
+    display: block;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.mobilemenu-trigger button span.box span.bar {
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 3px;
+}
+
+.mobilemenu-trigger button span.box span.bar.top {
+    top: 3px;
+}
+
+.mobilemenu-trigger button span.box span.bar.middle {
+    top: 50%;
+    margin: -1px 0 0;
+}
+
+.mobilemenu-trigger button span.box span.bar.bottom {
+    bottom: 3px;
+}
+
+.mobilemenu-trigger button.active span.box span.bar {
+    width: 100% !important;
+    background-color: #4A4A4A;
+}
+
+.mobilemenu-trigger button.active span.box span.bar.top {
+    -webkit-transform: rotate(45deg) translate(8px, 7px);
+            transform: rotate(45deg) translate(8px, 7px);
+    top: 0;
+}
+
+.mobilemenu-trigger button.active span.box span.bar.middle {
+    opacity: 0;
+}
+
+.mobilemenu-trigger button.active span.box span.bar.bottom {
+    -webkit-transform: rotate(-45deg) translate(8px, -7px);
+            transform: rotate(-45deg) translate(8px, -7px);
+    bottom: 2px;
+}
+
+
+
 #mobilemenu {
     display: none;
     position: fixed;
