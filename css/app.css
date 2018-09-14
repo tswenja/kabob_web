@@ -286,31 +286,30 @@ html, body {
 .mobilemenu_override.mobilemenu-active .headbar {
   position: relative;
   z-index: 30; }
-@media only screen and (min-width: 1024px) {
-  .mobilemenu_override .mobilemenu-trigger {
-    display: none; } }
-.mobilemenu_override .mobilemenu-trigger > .trigger {
-  outline: none; }
-  .mobilemenu_override .mobilemenu-trigger > .trigger.active > .box > .bar {
-    background-color: #ffffff; }
 .mobilemenu_override #mobilemenu {
   height: auto;
   bottom: 0;
   background-color: #292929; }
-  @media only screen and (min-width: 1024px) {
-    .mobilemenu_override #mobilemenu {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 64px;
-      background: none;
-      box-shadow: none;
-      -webkit-transition: none;
-      -moz-transition: none;
-      -ms-transition: none;
-      -o-transition: none;
-      transition: none; } }
+.mobilemenu_override .mobilemenu-trigger > .trigger {
+  outline: none; }
+  .mobilemenu_override .mobilemenu-trigger > .trigger.active > .box > .bar {
+    background-color: #ffffff; }
+@media only screen and (min-width: 1024px) {
+  .mobilemenu_override #mobilemenu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 64px;
+    background: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none; }
+  .mobilemenu_override .mobilemenu-trigger {
+    display: none; } }
 
 .footer {
   padding: 40px 35px; }
@@ -847,6 +846,7 @@ html, body {
   margin-top: -3px; }
 
 .section-kv-lookr {
+  min-height: 100vh;
   padding-top: 15px;
   background: url("../images/lookr_bg.png") no-repeat -280px -41px;
   background-size: auto 124.6%; }
@@ -856,6 +856,9 @@ html, body {
       padding-bottom: 150px;
       background-size: 2000px auto;
       background-position: center -51px; } }
+  @media only screen and (min-width: 2000px) {
+    .section-kv-lookr {
+      background-size: 100% auto; } }
   .section-kv-lookr .kv_desc {
     width: 100%;
     max-width: 578px;
@@ -1088,6 +1091,7 @@ html, body {
     color: white; }
 
 .section-kv-teachor {
+  min-height: 100vh;
   padding-top: 70px;
   background: url("../images/teachor_bg.png") no-repeat left top;
   background-size: cover; }

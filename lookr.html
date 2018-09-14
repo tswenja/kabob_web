@@ -21,31 +21,34 @@
   <script id="mobilemenu" src="vendor/sidebar/js/jquery.mobilemenu.js"></script>
 </head>
 <body>
-  <header class="header-effects">
-    <div class="header">
+  <header class="mobilemenu_override">
+    <div class="header-effects"><div class="header">
       <div class="headbar">
         <div class="h-100 d-flex align-items-center">
           <img class="logo_img logo_img-lookr" src="images/lookr_logo.svg" alt="Lookr" />
           <button type="button" class="btn btn-link d-lg-block d-none">
             <img class="products_img" src="images/products_icon.svg" alt="kabob products" />
           </button>
+
+          <div class="ml-auto">
+            <div class="mobilemenu-trigger ml-auto">
+              <button class="trigger">
+                <span class="box">
+                  <span class="bar top"></span>
+                  <span class="bar middle"></span>
+                  <span class="bar bottom"></span>
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div id="mobilemenu" class="mobilemenu_override">
+      <div id="mobilemenu">
         <div class="mobilemenu-wrapper">
-          <div class="mobilemenu-trigger">
-            <button class="trigger">
-              <span class="box">
-                <span class="bar top"></span>
-                <span class="bar middle"></span>
-                <span class="bar bottom"></span>
-              </span>
-            </button>
-          </div>
           <div class="mobilemenu-view">
             <nav class="header_menu_style">
-              <div class="header_menu_spacing">
+              <div class="header_menu_spacing d-flex align-items-center justify-content-end">
                 <ul>
                   <li class="nav_item">
                     <a href="#" class="text-white">新聞</a>
@@ -82,11 +85,12 @@
           </div>
         </div>
       </div>
-    </div>
+
+    </div></div>
   </header>
 
   <main class="main">
-    <section class="d-flex flex-wrap justify-content-center section-kv section-kv-lookr kv_fonts pt_for_header">
+    <section class="d-flex flex-wrap justify-content-center align-items-center section-kv section-kv-lookr kv_fonts pt_for_header">
       <div class="kv_desc">
         <h1 class="kv_fonts-title mx-auto mb-4">
           實現你的<br>數位看板計畫
@@ -100,12 +104,13 @@
       </div>
     </section>
 
-    <section class="bg-white section-lg ha-waypoint" data-animate-down="header-ready" data-animate-up="none">
+    <section class="bg-white section-lg">
       <div class="section_px">
         <h3 class="h3_fonts text-center mb-2 pb-1">
           <span class="d-inline-block">Lookr</span>
           <span class="d-inline-block">數位看板雲端服務</span>
         </h3>
+        <div class="ha-waypoint" data-animate-down="header-ready" data-animate-up="none"></div>
         <p class="desc_fonts w-75 mx-auto text-center">
           <span class="d-inline-block">電視盒、平板電腦、</span>
           <span class="d-inline-block">隨便你想用的顯示器</span>
@@ -118,6 +123,7 @@
           <figure class="figure-left">
             <figcaption class="figcaption">
               <h4 class="figtitle h4_fonts">管理後台</h4>
+              <div class="ha-waypoint" data-animate-down="header-show" data-animate-up="header-hide"></div>
               Lookr.cc 網站
             </figcaption>
             <img src="images/lookr_image_notebook.png" alt="管理後台 Lookr.cc 網站" class="img-fluid">
@@ -146,7 +152,7 @@
       </div>
     </section>
 
-    <section class="section-lg section_px lookr_bg-milk ha-waypoint" data-animate-down="header-show" data-animate-up="header-hide">
+    <section class="section-lg section_px lookr_bg-milk">
       <div class="section_header_mb">
         <h3 class="h3_fonts text-center mb-2 pb-1">
           <span class="d-inline-block">簡單上手的</span><span class="d-inline-block">管理介面</span>
@@ -474,27 +480,6 @@
   </footer>
 
   <script src="js/header_effects.js"></script>
-  <script>
-    AOS.init({
-      easing: 'ease-in-out-sine'
-    });
-  </script>
-  <script>
-    $(window).ready(function(){
-      $.mobilemenu()
-
-      $('#mobilemenu button.trigger').click(function() {
-        if ( this.classList.contains('active') ) {
-          document.querySelector('header .header').classList.add('mobilemenu-active')
-        }
-        else {
-          setTimeout( function() {
-            document.querySelector('header .header').classList.remove('mobilemenu-active')
-          }, 500);
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>

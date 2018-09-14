@@ -53,7 +53,7 @@
         <div class="mobilemenu-wrapper">
           <div class="mobilemenu-view">
             <nav class="header_menu_style">
-                <div class="header_menu_spacing d-flex align-items-center">
+              <div class="header_menu_spacing d-flex align-items-center justify-content-end">
                 <ul>
                   <li class="nav_item">
                     <a href="#" class="text-white">新聞</a>
@@ -118,12 +118,11 @@
             <span class="d-inline-block">SaaS级智能营销</span>
             <span class="d-inline-block">管理云平台</span>
           </h3>
+          <div class="ha-waypoint" data-animate-down="header-ready" data-animate-up="none"></div>
           <p class="desc_fonts mb-20px mb-md-5">
             满足门店所有数字需求
           </p>
         </div>
-
-        <div class="ha-waypoint" data-animate-down="header-ready" data-animate-up="none"></div>
 
         <div class="d-flex flex-wrap justify-content-center">
           <div class="d-flex flex-wrap justify-content-center">
@@ -132,8 +131,8 @@
                 <h1 class="product">數位看板雲服務</h1><img class="platform_icon" src="pic/lookr_sk.png" alt=""/>
                 <p class="e_name">Lookr</p>
                 <p class="c_name">盼盼</p>
-                <p class="intro">跨平台，多維度，輕鬆管理多門店屏幕，新媒體更創意</p>
                 <div class="ha-waypoint" data-animate-down="header-show" data-animate-up="header-hide"></div>
+                <p class="intro">跨平台，多維度，輕鬆管理多門店屏幕，新媒體更創意</p>
                 <a href="lookr.html" class="btn text-white more more1">了解更多</a>
               </div>
             </div>
@@ -478,19 +477,6 @@
   </footer>
 
   <script src="js/header_effects.js"></script>
-  <script>
-    AOS.init({
-      easing: 'ease-in-out-sine'
-    });
-  </script>
-  <script>
-    $(window).ready(function(){
-      $.mobilemenu({
-        container: '.mobilemenu_override',
-        trigger: '.mobilemenu-trigger button.trigger'
-      });
-    });
-  </script>
   <script>
     // slick init
     $(document).ready(function(){

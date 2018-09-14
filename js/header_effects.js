@@ -21,3 +21,18 @@ $( '.ha-waypoint' ).each( function(i) {
     }
   }, { offset: '100%' } );
 } );
+
+
+// mobilemenu
+if (window.AOS) {
+  AOS.init({
+    easing: 'ease-in-out-sine'
+  });
+}
+
+$(window).ready(function(){
+  $.mobilemenu({
+    container: '.mobilemenu_override',
+    trigger: '.mobilemenu-trigger button.trigger'
+  });
+});

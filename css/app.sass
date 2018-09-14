@@ -194,20 +194,19 @@ $header_menu_bottom_height: 88px
       position: relative
       z-index: 30
 
-  .mobilemenu-trigger
-    @include breakpoint(desktop)
-      display: none
-    & > .trigger
-      outline: none
-      &.active > .box > .bar
-        background-color: #ffffff
-
   #mobilemenu
     height: auto
     bottom: 0
     background-color: $color-nav-bg
 
-    @include breakpoint(desktop)
+  .mobilemenu-trigger
+    & > .trigger
+      outline: none
+      &.active > .box > .bar
+        background-color: #ffffff
+
+  @include breakpoint(desktop)
+    #mobilemenu
       display: block
       position: absolute
       top: 0
@@ -216,6 +215,8 @@ $header_menu_bottom_height: 88px
       background: none
       box-shadow: none
       +css3-prefix( transition, none )
+    .mobilemenu-trigger
+      display: none
 
 
 .footer
@@ -739,6 +740,7 @@ $kabob_section_px: 8.6%
 .section-kv-lookr
   $breakpint-kv-lookr: 1210px
 
+  min-height: 100vh
   padding-top: 15px
   background: url("../images/lookr_bg.png") no-repeat -280px -41px
   background-size: auto 124.6%
@@ -748,6 +750,8 @@ $kabob_section_px: 8.6%
     padding-bottom: 150px
     background-size: 2000px auto
     background-position: center -51px
+  @include breakpoint(2000px)
+    background-size: 100% auto
 
   .kv_desc
     width: 100%
@@ -988,6 +992,7 @@ $kabob_section_px: 8.6%
   $breakpoint-teachor-kv: 446px
   $teachor-kv-padding-x: 6.25%
 
+  min-height: 100vh
   padding-top: 70px
   background: url("../images/teachor_bg.png") no-repeat left top
   background-size: cover
