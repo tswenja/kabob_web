@@ -55,6 +55,7 @@ dl, ul, ol
 figure
   margin: 0
 
+
 .link-white
   color: #ffffff
   &:hover, &.hover, &:active, &.active, &:visited, &.visited, &:focus, &.focus
@@ -66,6 +67,12 @@ figure
   opacity: 0.7
   &:hover, &:active, &:focus
     opacity: 1
+
+.hover-lighter
+  &:hover, &:active, &:focus
+    background-image: url('../images/bg_mask-lighter.png')
+    background-repeat: repeat
+
 
 button
   cursor: pointer

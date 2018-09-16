@@ -23,6 +23,10 @@ figure {
   .hover-fade-in:hover, .hover-fade-in:active, .hover-fade-in:focus, .hover-fade-in:visited:hover, .hover-fade-in:visited:active, .hover-fade-in:visited:focus {
     opacity: 1; }
 
+.hover-lighter:hover, .hover-lighter:active, .hover-lighter:focus {
+  background-image: url("../images/bg_mask-lighter.png");
+  background-repeat: repeat; }
+
 button {
   cursor: pointer; }
 
@@ -108,6 +112,14 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   vertical-align: middle; }
+
+.icon-circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden; }
 
 .icon-hamburger {
   width: 25px;
@@ -322,9 +334,6 @@ html, body {
 
 .footer-lookr {
   background-color: #a0dae3; }
-
-.footer-button + .footer-button {
-  margin-left: 10px; }
 
 .copyright_fonts {
   font-size: 12px; }
