@@ -203,52 +203,30 @@ html, body {
   background-color: #f9ae0f; }
 
 .header_menu_style {
-  width: 100%;
-  height: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
-  overflow-y: auto;
-  background-color: #292929;
-  border-top: 64px solid #292929; }
+  min-height: 100%;
+  padding-top: 64px; }
   @media only screen and (min-width: 1024px) {
     .header_menu_style {
-      margin-top: 0;
-      right: 0;
-      top: 0;
       height: 64px;
       padding-top: 0;
-      padding-right: 0;
-      background: none;
-      text-align: right;
-      border-top: none; } }
-  .header_menu_style .nav_item {
-    display: inline-block;
-    margin-top: 15px;
-    margin-right: 30px;
-    padding-right: 10px;
-    width: 100%;
-    padding-bottom: 10px;
-    vertical-align: middle;
-    font-size: 18px;
-    opacity: 0.6; }
-    @media only screen and (min-width: 1024px) {
-      .header_menu_style .nav_item {
-        width: auto;
-        opacity: 1;
-        font-size: 14px; } }
+      text-align: right; } }
 
-@media only screen and (max-width: 1023px) {
-  .header_menu_spacing {
-    min-height: 100%;
-    padding-bottom: 88px;
-    margin-bottom: -88px; }
+.nav_item {
+  display: inline-block;
+  margin-top: 12px;
+  margin-right: 30px;
+  padding-right: 10px;
+  width: 100%;
+  padding-bottom: 12px;
+  vertical-align: middle;
+  font-size: 18px;
+  opacity: 0.6; }
+  @media only screen and (min-width: 1024px) {
+    .nav_item {
+      width: auto;
+      opacity: 1;
+      font-size: 14px; } }
 
-  .header_menu_bottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 88px;
-    background-color: #292929; } }
 .header_menu_toggler {
   position: absolute;
   top: 0;
@@ -305,14 +283,28 @@ html, body {
 .mobilemenu_override.mobilemenu-active .headbar {
   position: relative;
   z-index: 30; }
-.mobilemenu_override #mobilemenu {
-  height: auto;
-  bottom: 0;
-  background-color: #292929; }
 .mobilemenu_override .mobilemenu-trigger > .trigger {
   outline: none; }
   .mobilemenu_override .mobilemenu-trigger > .trigger.active > .box > .bar {
     background-color: #ffffff; }
+@media only screen and (max-width: 1023px) {
+  .mobilemenu_override #mobilemenu {
+    height: auto;
+    bottom: 0;
+    background-color: #292929; }
+    .mobilemenu_override #mobilemenu .mobilemenu-wrapper {
+      padding-left: 30px;
+      padding-right: 30px; }
+    .mobilemenu_override #mobilemenu .mobilemenu-view {
+      overflow-y: auto; }
+    .mobilemenu_override #mobilemenu ._bottom_div_padding {
+      padding-bottom: 88px;
+      margin-bottom: -88px; }
+    .mobilemenu_override #mobilemenu .mobilemenu-bottom {
+      position: relative;
+      z-index: 2;
+      height: 88px;
+      background-color: #292929; } }
 @media only screen and (min-width: 1024px) {
   .mobilemenu_override #mobilemenu {
     display: block;
