@@ -331,13 +331,17 @@ html, body {
     display: none; } }
 
 .footer {
-  padding: 40px 35px; }
+  padding: 40px 35px 30px; }
+  @media only screen and (min-width: 768px) {
+    .footer {
+      padding: 30px 40px 20px; } }
 
 .footer-lookr {
   background-color: #a0dae3; }
 
 .copyright_fonts {
-  font-size: 12px; }
+  font-size: 12px;
+  letter-spacing: 0.026em; }
 
 .h3_mb {
   margin-bottom: 30px; }
