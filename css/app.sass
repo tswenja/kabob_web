@@ -740,12 +740,14 @@ $kabob_section_px: 8.6%
 
   min-height: 100vh
   padding-top: 15px
-  background: url("../images/lookr_bg.png") no-repeat -280px -41px
+  background: no-repeat -280px -41px
+  background-image: url("../images/lookr_bg.jpg"), url("../images/lookr_bg@0.5x.jpg")
   background-size: auto 124.6%
 
   @include breakpoint($breakpint-kv-lookr)
     padding-top: 194px
     padding-bottom: 150px
+    background-image: url("../images/lookr_bg@2x.jpg"), url("../images/lookr_bg.jpg"), url("../images/lookr_bg@0.5x.jpg")
     background-size: 2000px auto
     background-position: center -51px
   @include breakpoint(2000px)
@@ -821,7 +823,6 @@ $kabob_section_px: 8.6%
 
 .section-trylookr
   color: #ffffff
-  background: url("../images/lookr_bg.png") no-repeat -470px -431px
   background-size: 1422px auto
   @include breakpoint(952px)
     background-size: 138% auto
@@ -994,6 +995,8 @@ $kabob_section_px: 8.6%
   padding-top: 70px
   background: url("../images/teachor_bg.png") no-repeat left top
   background-size: cover
+  @include breakpoint(md)
+    background-image: url("../images/teachor_bg@2x.png"), url("../images/teachor_bg.png")
 
   .kv_size
     width: 100%

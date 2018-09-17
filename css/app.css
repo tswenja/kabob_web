@@ -863,12 +863,14 @@ html, body {
 .section-kv-lookr {
   min-height: 100vh;
   padding-top: 15px;
-  background: url("../images/lookr_bg.png") no-repeat -280px -41px;
+  background: no-repeat -280px -41px;
+  background-image: url("../images/lookr_bg.jpg"), url("../images/lookr_bg@0.5x.jpg");
   background-size: auto 124.6%; }
   @media only screen and (min-width: 1210px) {
     .section-kv-lookr {
       padding-top: 194px;
       padding-bottom: 150px;
+      background-image: url("../images/lookr_bg@2x.jpg"), url("../images/lookr_bg.jpg"), url("../images/lookr_bg@0.5x.jpg");
       background-size: 2000px auto;
       background-position: center -51px; } }
   @media only screen and (min-width: 2000px) {
@@ -942,7 +944,6 @@ html, body {
 
 .section-trylookr {
   color: #ffffff;
-  background: url("../images/lookr_bg.png") no-repeat -470px -431px;
   background-size: 1422px auto; }
   @media only screen and (min-width: 952px) {
     .section-trylookr {
@@ -1110,6 +1111,9 @@ html, body {
   padding-top: 70px;
   background: url("../images/teachor_bg.png") no-repeat left top;
   background-size: cover; }
+  @media only screen and (min-width: 768px) {
+    .section-kv-teachor {
+      background-image: url("../images/teachor_bg@2x.png"), url("../images/teachor_bg.png"); } }
   .section-kv-teachor .kv_size {
     width: 100%;
     max-width: 739px;
