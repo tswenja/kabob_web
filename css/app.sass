@@ -326,6 +326,9 @@ $header_menu_bottom_height: 88px
   margin-top: -10px
   margin-bottom: -10px
 
+.pricing_plan_wrapper
+  margin: 10px 15px
+
 
 .desc_fonts
   font-size: 12px
@@ -342,7 +345,7 @@ $header_menu_bottom_height: 88px
  *
  **/
 .pricing_plan
-  margin: 10px 15px
+  height: 100%
   width: 260px
   +css3-prefix( border-radius, 5px )
   overflow: hidden
@@ -966,6 +969,8 @@ $kabob_section_px: 8.6%
   overflow-x: scroll
 
 #lookr_widget_screenshots
+  width: 90%
+  max-width: 960px
   &[data-show=widget1_screenshot] > :not(#widget1_screenshot),
   &[data-show=widget2_screenshot] > :not(#widget2_screenshot),
   &[data-show=widget3_screenshot] > :not(#widget3_screenshot),

@@ -441,6 +441,9 @@ html, body {
   margin-top: -10px;
   margin-bottom: -10px; }
 
+.pricing_plan_wrapper {
+  margin: 10px 15px; }
+
 .desc_fonts {
   font-size: 12px;
   font-weight: 600; }
@@ -455,7 +458,7 @@ html, body {
  *
  */
 .pricing_plan {
-  margin: 10px 15px;
+  height: 100%;
   width: 260px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1097,8 +1100,11 @@ html, body {
 .lookr_widgets_scrollable {
   overflow-x: scroll; }
 
-#lookr_widget_screenshots[data-show=widget1_screenshot] > :not(#widget1_screenshot), #lookr_widget_screenshots[data-show=widget2_screenshot] > :not(#widget2_screenshot), #lookr_widget_screenshots[data-show=widget3_screenshot] > :not(#widget3_screenshot), #lookr_widget_screenshots[data-show=widget4_screenshot] > :not(#widget4_screenshot), #lookr_widget_screenshots[data-show=widget5_screenshot] > :not(#widget5_screenshot) {
-  display: none; }
+#lookr_widget_screenshots {
+  width: 90%;
+  max-width: 960px; }
+  #lookr_widget_screenshots[data-show=widget1_screenshot] > :not(#widget1_screenshot), #lookr_widget_screenshots[data-show=widget2_screenshot] > :not(#widget2_screenshot), #lookr_widget_screenshots[data-show=widget3_screenshot] > :not(#widget3_screenshot), #lookr_widget_screenshots[data-show=widget4_screenshot] > :not(#widget4_screenshot), #lookr_widget_screenshots[data-show=widget5_screenshot] > :not(#widget5_screenshot) {
+    display: none; }
 
 /**
  *
