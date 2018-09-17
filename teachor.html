@@ -20,8 +20,9 @@
   <script id="mobilemenu" src="vendor/sidebar/js/jquery.mobilemenu.js"></script>
 </head>
 <body>
-  <header class="mobilemenu_override">
+  <header>
     <div class="header-effects"><div class="header">
+
       <div class="headbar">
         <div class="h-100 d-flex align-items-center">
           <img class="mr-10px logo_img" src="images/teachor_logo.svg" alt="Teachor" />
@@ -44,45 +45,44 @@
         </div>
       </div>
 
-      <div id="mobilemenu">
+      <div id="mobilemenu" class="mobilemenu_override">
         <div class="mobilemenu-wrapper">
-          <div class="mobilemenu-view">
-            <nav class="header_menu_style">
-              <div class="header_menu_spacing d-flex align-items-center justify-content-end">
-                <ul class="w-100">
-                  <li class="nav_item">
-                    <a href="#" class="text-white">新聞</a>
-                  </li>
-                  <li class="nav_item">
-                    <a href="#" class="text-white">產品</a>
-                  </li>
-                  <li class="nav_item">
-                    <a href="#" class="text-white">方案</a>
-                  </li>
-                  <li class="nav_item desktop-only">
-                    <a href="" class="btn text-white mx-2 header_button-md header_button-teachor">開啟平台</a>
-                  </li>
-                  <li class="nav_item">
-                      <a href="#" class="text-white">註冊</a>
-                  </li>
-                  <li class="nav_item">
-                    <a href="#" class="text-white">登入</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="mobile-only header_menu_bottom d-flex align-items-center">
-                <div class="i18n_selector">
-                  <select class="select">
-                    <option>繁體中文</option>
-                    <option>簡體中文</option>
-                    <option>English</option>
-                    <option>日本語</option>
-                  </select>
-                </div>
-              </div>
+          <div class="mobilemenu-view _bottom_div_padding">
+            <nav class="header_menu_style d-flex align-items-center justify-content-end">
+              <ul class="w-100">
+                <li class="nav_item">
+                  <a href="#" class="text-white hover-fade-in">新聞</a>
+                </li>
+                <li class="nav_item">
+                  <a href="#" class="text-white hover-fade-in">產品</a>
+                </li>
+                <li class="nav_item">
+                  <a href="#" class="text-white hover-fade-in">方案</a>
+                </li>
+                <li class="nav_item desktop-only">
+                    <a href="" class="btn text-white mx-2 header_button-md header_button-teachor hover-lighter">開啟平台</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#" class="text-white hover-fade-in">註冊</a>
+                </li>
+                <li class="nav_item">
+                  <a href="#" class="text-white hover-fade-in">登入</a>
+                </li>
+              </ul>
             </nav>
           </div>
+
+          <div class="mobile-only mobilemenu-bottom d-flex align-items-center">
+            <div class="i18n_selector">
+              <select class="select">
+                <option>繁體中文</option>
+                <option>簡體中文</option>
+                <option>English</option>
+                <option>日本語</option>
+              </select>
+            </div>
+          </div>
+
         </div>
       </div>
 

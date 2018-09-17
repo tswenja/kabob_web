@@ -32,7 +32,7 @@ if (window.AOS) {
 
 $(window).ready(function(){
   $.mobilemenu({
-    container: '.mobilemenu_override',
+    container: 'body',
     trigger: '.mobilemenu-trigger button.trigger'
   });
 });

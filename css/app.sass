@@ -1,5 +1,5 @@
 @import common
-@import bootstrap_overwriten
+@import bootstrap_override
 @import icons
 
 html
@@ -158,60 +158,59 @@ $color-voicer: #f9ae0f
         transition: background-color 0.4s, width 0s
         transition-delay: 0s, 0s
 
-.mobilemenu_override
-  $header_menu_bottom_height: 88px
+.mobilemenu-active
+  .header
+    position: fixed
+    height: auto
+    top: 0
+    bottom: 0
+  .headbar
+    position: relative
+    z-index: 30
+    background-color: $color-nav-bg
 
-  &.mobilemenu-active
-    .header
-      position: fixed
-      height: auto
-      top: 0
-      bottom: 0
-    .headbar
-      position: relative
-      z-index: 30
+.mobilemenu-trigger
+  & > .trigger
+    outline: none
+    &.active > .box > .bar
+      background-color: #ffffff
+  @include breakpoint(desktop)
+    display: none
 
-  .mobilemenu-trigger
-    & > .trigger
-      outline: none
-      &.active > .box > .bar
-        background-color: #ffffff
 
+$header_menu_bottom_height: 88px
+#mobilemenu.mobilemenu_override
   @include untilpoint(desktop)
-    #mobilemenu
-      height: auto
-      bottom: 0
+    height: auto
+    bottom: 0
+    background-color: $color-nav-bg
+
+    .mobilemenu-wrapper
+      padding-left: 30px
+      padding-right: 30px
+
+    .mobilemenu-view
+      overflow-y: auto
+
+    ._bottom_div_padding
+      padding-bottom: $header_menu_bottom_height
+      margin-bottom: -$header_menu_bottom_height
+
+    .mobilemenu-bottom
+      position: relative
+      z-index: 2
+      height: $header_menu_bottom_height
       background-color: $color-nav-bg
 
-      .mobilemenu-wrapper
-        padding-left: 30px
-        padding-right: 30px
-
-      .mobilemenu-view
-        overflow-y: auto
-
-      ._bottom_div_padding
-        padding-bottom: $header_menu_bottom_height
-        margin-bottom: -$header_menu_bottom_height
-
-      .mobilemenu-bottom
-        position: relative
-        z-index: 2
-        height: $header_menu_bottom_height
-        background-color: $color-nav-bg
-
   @include breakpoint(desktop)
-    #mobilemenu
-      display: block
-      position: absolute
-      top: 0
-      right: 0
-      height: $header_height
-      background: none
-      box-shadow: none
-      +css3-prefix( transition, none )
-    .mobilemenu-trigger
-      display: none
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    height: $header_height
+    background: none
+    box-shadow: none
+    +css3-prefix( transition, none )
 
 
 .footer

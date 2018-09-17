@@ -275,38 +275,44 @@ html, body {
     body.nav_transition.nav_in .header_menu_toggler::before {
       transition: background-color 0.4s, width 0s;
       transition-delay: 0s, 0s; } }
-.mobilemenu_override.mobilemenu-active .header {
+.mobilemenu-active .header {
   position: fixed;
   height: auto;
   top: 0;
   bottom: 0; }
-.mobilemenu_override.mobilemenu-active .headbar {
+.mobilemenu-active .headbar {
   position: relative;
-  z-index: 30; }
-.mobilemenu_override .mobilemenu-trigger > .trigger {
+  z-index: 30;
+  background-color: #292929; }
+
+.mobilemenu-trigger > .trigger {
   outline: none; }
-  .mobilemenu_override .mobilemenu-trigger > .trigger.active > .box > .bar {
+  .mobilemenu-trigger > .trigger.active > .box > .bar {
     background-color: #ffffff; }
+@media only screen and (min-width: 1024px) {
+  .mobilemenu-trigger {
+    display: none; } }
+
 @media only screen and (max-width: 1023px) {
-  .mobilemenu_override #mobilemenu {
+  #mobilemenu.mobilemenu_override {
     height: auto;
     bottom: 0;
     background-color: #292929; }
-    .mobilemenu_override #mobilemenu .mobilemenu-wrapper {
+    #mobilemenu.mobilemenu_override .mobilemenu-wrapper {
       padding-left: 30px;
       padding-right: 30px; }
-    .mobilemenu_override #mobilemenu .mobilemenu-view {
+    #mobilemenu.mobilemenu_override .mobilemenu-view {
       overflow-y: auto; }
-    .mobilemenu_override #mobilemenu ._bottom_div_padding {
+    #mobilemenu.mobilemenu_override ._bottom_div_padding {
       padding-bottom: 88px;
       margin-bottom: -88px; }
-    .mobilemenu_override #mobilemenu .mobilemenu-bottom {
+    #mobilemenu.mobilemenu_override .mobilemenu-bottom {
       position: relative;
       z-index: 2;
       height: 88px;
       background-color: #292929; } }
 @media only screen and (min-width: 1024px) {
-  .mobilemenu_override #mobilemenu {
+  #mobilemenu.mobilemenu_override {
     display: block;
     position: absolute;
     top: 0;
@@ -318,9 +324,7 @@ html, body {
     -moz-transition: none;
     -ms-transition: none;
     -o-transition: none;
-    transition: none; }
-  .mobilemenu_override .mobilemenu-trigger {
-    display: none; } }
+    transition: none; } }
 
 .footer {
   padding: 40px 35px 30px; }
