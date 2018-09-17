@@ -536,7 +536,8 @@ html, body {
     background: none;
     outline: none;
     color: inherit;
-    padding-right: 2em; }
+    padding-right: 2em;
+    cursor: pointer; }
 
 .card-general {
   display: inline-block;
