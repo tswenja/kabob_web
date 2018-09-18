@@ -26,7 +26,8 @@ $( '.ha-waypoint' ).each( function(i) {
 // mobilemenu
 if (window.AOS) {
   AOS.init({
-    easing: 'ease-in-out-sine'
+    easing: 'ease-in-out-sine',
+    offset: 60
   });
 }
 
