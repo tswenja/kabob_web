@@ -834,7 +834,29 @@ html, body {
   border: 1px solid #09a8be; }
 
 .kabob_map_figure {
+  position: relative;
+  min-width: 408px;
   max-width: 600px; }
+  @media only screen and (max-width: 635px) {
+    .kabob_map_figure {
+      left: 100%;
+      transform: translate(-106%); } }
+  .kabob_map_figure .kabob_map_spot {
+    position: absolute;
+    height: 10.5%;
+    min-height: 24px; }
+    .kabob_map_figure .kabob_map_spot.china {
+      left: 72%;
+      top: 26%; }
+    .kabob_map_figure .kabob_map_spot.japan {
+      left: 89%;
+      top: 36%; }
+    .kabob_map_figure .kabob_map_spot.taiwan {
+      left: 85.5%;
+      top: 50%; }
+    .kabob_map_figure .kabob_map_spot.singapore {
+      left: 61%;
+      top: 60.7%; }
 
 .kabob_usecases_slicker {
   margin-left: 210px;

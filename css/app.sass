@@ -706,7 +706,28 @@ $kabob_section_px: 8.6%
   border: 1px solid $color-lookr
 
 .kabob_map_figure
+  position: relative
+  min-width: 408px
   max-width: 600px
+  @include untilpoint(635px)
+    left: 100%
+    transform: translate(-106%)
+  .kabob_map_spot
+    position: absolute
+    height: 10.5%
+    min-height: 24px
+    &.china
+      left: 72%
+      top: 26%
+    &.japan
+      left: 89%
+      top: 36%
+    &.taiwan
+      left: 85.5%
+      top: 50%
+    &.singapore
+      left: 61%
+      top: 60.7%
 
 .kabob_usecases_slicker
   margin-left: (200px + 10px)

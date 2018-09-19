@@ -27,7 +27,7 @@ $( '.ha-waypoint' ).each( function(i) {
 if (window.AOS) {
   AOS.init({
     easing: 'ease-in-out-sine',
-    offset: 60
+    offset: 88
   });
 }
 
