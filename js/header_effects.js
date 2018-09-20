@@ -25,9 +25,11 @@ $( '.ha-waypoint' ).each( function(i) {
 
 // mobilemenu
 if (window.AOS) {
+  var offset = 88;
+  if (window.innerWidth >= 768) offset = 120;
   AOS.init({
     easing: 'ease-in-out-sine',
-    offset: 88
+    offset: offset
   });
 }
 
