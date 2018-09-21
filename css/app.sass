@@ -77,8 +77,6 @@ $color-voicer: #f9ae0f
   background-color: $color-lookr
 .header_button-teachor
   background-color: $color-teachor
-.header_button-voicer
-  background-color: $color-voicer
 
 .header_menu_style
   min-height: 100%
@@ -1173,3 +1171,119 @@ $kabob_section_px: 8.6%
         bottom: 0
         & > img
           position: initial
+
+
+
+/**
+ *
+ * Voicer
+ *
+ **/
+.btn-voicer
+  background-color: $color-voicer
+
+.section-kv-voicer
+  background: url('../images/voicer_bg_1.png') no-repeat top center
+  background-size: cover
+
+  .kv_image
+    max-width: 698px
+
+  @include breakpoint(md)
+    .kv_desc
+      width: 42%
+    .kv_image
+      width: 58%
+
+.voicer_bg-light
+  background: #f5f3f0
+  color: #464646
+
+.voicer_bg-dark
+  background: #292929
+  color: #ffffff
+
+.voicer_bg-notes
+  padding-top: 100px
+  background: #292929 url('../images/voicer_bg_2@2x.png') no-repeat bottom 100px left
+  background-size: auto 60%
+  @include breakpoint(lg)
+    padding-top: 90px
+    padding-bottom: 72px
+    background-position: center
+    background-size: 100% auto
+
+.voicer_bg-beats
+  position: relative
+  background: #292929
+  color: #ffffff
+  .dot
+    position: absolute
+    width: 25px
+    height: 25px
+    border-radius: 50%
+    overflow: hidden
+    background-color: #f9ae0f
+    opacity: 0.02
+    transition: all 0.3s ease-in
+  .up
+    transition: all 0.06s
+
+.voicer_bg-footer
+  background-color: #fbc95e
+
+.voicer_image-sketch1
+  width: 88%
+  max-width: 547px
+
+.voicer_image-sketch2
+  width: 57.5%
+  max-width: 230px
+
+.voicer_figure-schedule, .voicer_figure-controller
+  padding-left: 15px
+  padding-right: 15px
+
+  .voicer_image-app
+    width: 100%
+    max-width: 636px
+
+  .voicer_image-mobile
+    width: 38%
+    max-width: 220px
+
+.voicer_figure-schedule
+  position: relative
+  max-width: 660px
+  max-width: 1200px
+  .voicer_image-app
+    position: relative
+    @include breakpoint(md)
+      z-index: 1
+      margin-left: 40%
+  .voicer_image-settings
+    position: relative
+    max-width: 610px
+    margin-top: -25%
+    transform: translate(21%)
+    @include breakpoint(md)
+      position: absolute
+      top: 0
+      left: 4%
+      margin-top: 0
+      transform: translate(0, 25%)
+
+.voicer_figure-controller
+  max-width: 660px
+  .voicer_image-mobile
+    position: relative
+    margin-top: -56%
+    margin-left: 66%
+
+.voicer_controller_section
+  max-width: 1200px
+
+.beats_spacing
+  height: 145px
+  @include breakpoint(md)
+    height: 218px
