@@ -91,6 +91,7 @@
 
   beatsLoop = function() {
     var delay = Math.pow(getRandomInt(32, 1), 2) + 1000;
+    var delay = 1600;
     var targetX = getRandomInt(x*0.60, x*0.40),
         targetY = getRandomInt(y*0.60, y*0.40);
     var targetX = Math.floor(x*0.5);
