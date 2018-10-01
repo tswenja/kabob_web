@@ -1341,10 +1341,7 @@ html, body {
     border-radius: 50%;
     overflow: hidden;
     background-color: #f9ae0f;
-    opacity: 0.02;
-    transition: all 0.3s ease-in; }
-  .voicer_bg-beats .up {
-    transition: all 0.06s; }
+    opacity: 0.02; }
 
 .voicer_bg-footer {
   background-color: #fbc95e; }

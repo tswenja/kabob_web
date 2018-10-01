@@ -1,11 +1,13 @@
 (function(d) {
   var c = d.querySelector('.voicer_bg-beats');
   var dotSize = 25;
+  var dotGutterX = dotSize*0.62,
+      dotGutterY = dotSize*0.4,
+      dotSpaceW = dotSize*1.62,
+      dotSpaceH = dotSize*1.4;
 
-  var x = Math.floor(c.clientWidth / 40) + 1,
-      y = Math.floor(c.clientHeight / 30),
-      dotGutterX = dotSize*0.6,
-      dotGutterY = dotSize*0.2,
+  var x = Math.floor(c.clientWidth / dotSpaceW) + 1,
+      y = Math.floor(c.clientHeight / dotSpaceH),
       linesOffset = dotSize*0.8;
   var dotsAry = [[]];
 
@@ -14,10 +16,8 @@
     for (var j=0; j<y; j++) {
       var dot = d.createElement('div');
       dot.classList.add('dot');
-      dot.style.left = (i * 40 + (j % 2) * 20) - 10 + "px";
-      dot.style.top = (j * 30) + 10 + "px";
-      dot.style.left = (i * (dotSize + dotGutterX) + (j % 2) * linesOffset) - (dotSize*0.4) + "px";
-      dot.style.top = (j * (dotSize + dotGutterY)) + (dotSize*0.4) + "px";
+      dot.style.left = (i * dotSpaceW + (j % 2) * linesOffset) - (dotSize*0.4) + "px";
+      dot.style.top = (j * dotSpaceH) + (dotSize*0.4) + "px";
       dot.style.opacity = 0.02;
       dot.cordX = i;
       dot.cordY = j;
@@ -27,53 +27,72 @@
     }
   }
 
-  var spread = 10;
+  var spread = 10,
+      deep = 3;
 
-  beatUp = function(dot, level, starter) {
-    level = level || 1;
-    //var opacityUp = 1 / Math.pow(level, 1.7);
-    var opacityUp = (function(t, b, c, d) {
-      t = t / d;
-      return 1 / (c*t*t*t*t + b);
-    })(level, 0, 1, 1.82);
-    opacityUp = Math.min( opacityUp, 1);
+  beatUp3 = function(dot, deep) {
+    deep = deep || 5;
 
-    if ( dot.upAt !== null && dot.upAt >= starter.upAt ) return;
-    if ( opacityUp <= 0.02 ) return;
+    if ( level >= deep ) return;
 
-    //console.log( opacityUp );
-
-    dot.upAt = starter ? starter.upAt : Date.now();
-    dot.classList.add('up');
-    dot.style.opacity = opacityUp + 0.02;
-    //var dismissDelay = 300 * (1 / Math.pow(level, 1.5));
-    var dismissDelay = 30 * opacityUp + 30;
-    if (dot.downTimer) clearTimeout(dot.downTimer);
-    dot.downTimer = setTimeout( beatDown.bind(null, dot), dismissDelay );
-
-    if ( level > 10 ) return;
-    if ( dot.cordX <= 0 || dot.cordX >= (x-1) ) return;
-    if ( dot.cordY <= 0 || dot.cordY >= (y-1) ) return;
-
-    var v2Cords = [];
-    if ( dot.cordY % 2 == 0 ) {
-      v2Cords.push( [dot.cordX - 1, dot.cordY - 1] );
-      v2Cords.push( [dot.cordX, dot.cordY - 1] );
-      v2Cords.push( [dot.cordX - 1, dot.cordY + 1] );
-      v2Cords.push( [dot.cordX, dot.cordY + 1] );
+    var relativeDots = {},
+        levels = [[[dot.cordX, dot.cordY]]];
+    for (var level=0; level<deep; level++) {
+      levels[level] = levels[level] || [];
+      var seeds = levels[level-1] || [];
+      for (var i=0; i<seeds.length; i++) {
+        var seed = dotsAry[seeds[i][0]][seeds[i][1]],
+            lookupDirectionX,
+            relatives = [];
+        if ( seed.cordY % 2 == 0 ) {
+          lookupDirectionX = -1;
+        } else {
+          lookupDirectionX = 1;
+        }
+        relatives.push(
+          [seed.cordX + lookupDirectionX, seed.cordY - 1],
+          [seed.cordX, seed.cordY - 1],
+          [seed.cordX + 1, seed.cordY],
+          [seed.cordX - 1, seed.cordY],
+          [seed.cordX + lookupDirectionX, seed.cordY + 1],
+          [seed.cordX, seed.cordY + 1]
+        );
+        for (var j=0; j<relatives.length; j++) {
+          var rx = relatives[j][0], ry = relatives[j][1],
+              rkey = [rx,ry].join();
+          if (rx < 0) continue;
+          if (rx > x) continue;
+          if (rkey in relativeDots) continue;
+          levels[level].push(relatives[j]);
+        }
+      }
+      for (var i=0; i<levels[level].length; i++) {
+          var rx = levels[level][i][0], ry = levels[level][i][1],
+              key = [rx,ry].join();
+          relativeDots[key] = levels[level][i];
+      }
     }
-    else {
-      v2Cords.push( [dot.cordX + 1, dot.cordY - 1] );
-      v2Cords.push( [dot.cordX, dot.cordY - 1] );
-      v2Cords.push( [dot.cordX + 1, dot.cordY + 1] );
-      v2Cords.push( [dot.cordX, dot.cordY + 1] );
-    }
-    v2Cords.push( [dot.cordX - 1, dot.cordY] );
-    v2Cords.push( [dot.cordX + 1, dot.cordY] );
 
-    for (var n=0; n<v2Cords.length; n++) {
-      var dot2 = dotsAry[v2Cords[n][0]][v2Cords[n][1]];
-      setTimeout( beatUp.bind(null, dot2, level+1, starter || dot), spread );
+    // light up
+    spread = 10;
+    for (var l=0; l<levels.length; l++) {
+      var opacityUp = (function(t, b, c, d) {
+        t = t / d;
+        return 1 / (c*t*t*t*t + b);
+      })(l+1, 0, 1, 1.8);
+      opacityUp = Math.min( opacityUp, 1);
+
+      for (var i=0; i<levels[l].length; i++) {
+        var target = dotsAry[levels[l][i][0]][levels[l][i][1]];
+        target.classList.add('up');
+        target.style.transition = 'all 0s';
+        target.style.opacity = opacityUp;
+
+        var dismissDelay = 100 * opacityUp + spread;
+        if (target.downTimer) clearTimeout(target.downTimer);
+        target.downTimer = setTimeout( beatDown.bind(null, target), dismissDelay );
+        console.log(opacityUp, l);
+      }
     }
   }
 
@@ -81,6 +100,7 @@
     dot.upAt = null;
     dot.downTimer = null;
     dot.classList.remove('up');
+    dot.style.transition = 'all 0.26s ease-in';
     dot.style.opacity = 0.02;
   }
 
@@ -90,16 +110,16 @@
   }
 
   beatsLoop = function() {
-    var delay = Math.pow(getRandomInt(32, 1), 2) + 1000;
-    var delay = 1600;
+    var delay = Math.pow(getRandomInt(32, 1), 2) + 600;
     var targetX = getRandomInt(x*0.60, x*0.40),
         targetY = getRandomInt(y*0.60, y*0.40);
     var targetX = Math.floor(x*0.5);
         targetY = Math.floor(y*0.5);
-    setTimeout(beatUp.bind(null,dotsAry[targetX][targetY]), delay);
+    setTimeout(beatUp3.bind(null,dotsAry[targetX][targetY], getRandomInt(6, 3)), delay);
     setTimeout(beatsLoop, delay);
   }
   beatsLoop();
+  //beatUp3(dotsAry[Math.floor(x*0.5)][Math.floor(y*0.5)]);
 
 
 }(document));
