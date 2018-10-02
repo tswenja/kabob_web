@@ -6,8 +6,8 @@
       dotSpaceW = dotSize*1.62,
       dotSpaceH = dotSize*1.4;
 
-  var x = Math.floor(c.clientWidth / dotSpaceW) + 1,
-      y = Math.floor(c.clientHeight / dotSpaceH),
+  var x = Math.floor(c.clientWidth / (dotSpaceW)),
+      y = Math.floor(c.clientHeight / (dotSpaceH)),
       linesOffset = dotSize*0.8;
   var dotsAry = [[]];
 
@@ -60,8 +60,8 @@
         for (var j=0; j<relatives.length; j++) {
           var rx = relatives[j][0], ry = relatives[j][1],
               rkey = [rx,ry].join();
-          if (rx < 0) continue;
-          if (rx > x) continue;
+          if (rx < 0 || ry < 0) continue;
+          if (rx >= x || ry >= y) continue;
           if (rkey in relativeDots) continue;
           levels[level].push(relatives[j]);
         }
@@ -78,9 +78,10 @@
     for (var l=0; l<levels.length; l++) {
       var opacityUp = (function(t, b, c, d) {
         t = t / d;
-        return 1 / (c*t*t*t*t + b);
+        return 1 / (c*t*t*t + b);
       })(l+1, 0, 1, 1.8);
       opacityUp = Math.min( opacityUp, 1);
+      opacityUp = opacityUp * (deep / 8);
 
       for (var i=0; i<levels[l].length; i++) {
         var target = dotsAry[levels[l][i][0]][levels[l][i][1]];
@@ -115,7 +116,7 @@
         targetY = getRandomInt(y*0.60, y*0.40);
     var targetX = Math.floor(x*0.5);
         targetY = Math.floor(y*0.5);
-    setTimeout(beatUp3.bind(null,dotsAry[targetX][targetY], getRandomInt(6, 3)), delay);
+    setTimeout(beatUp3.bind(null,dotsAry[targetX][targetY], getRandomInt(10, 3)), delay);
     setTimeout(beatsLoop, delay);
   }
   beatsLoop();
