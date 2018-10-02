@@ -18,6 +18,9 @@ figure {
   .link-white:hover, .link-white.hover {
     opacity: 0.8; }
 
+.hover-fade:hover, .hover-fade:active, .hover-fade:focus, .hover-fade:visited:hover, .hover-fade:visited:active, .hover-fade:visited:focus {
+  opacity: 0.7; }
+
 .hover-fade-in, .hover-fade-in:visited {
   opacity: 0.7; }
   .hover-fade-in:hover, .hover-fade-in:active, .hover-fade-in:focus, .hover-fade-in:visited:hover, .hover-fade-in:visited:active, .hover-fade-in:visited:focus {
@@ -137,6 +140,16 @@ button {
   width: 20px;
   height: 21px;
   background-image: url(../images/icon-download-circle-blue@2x.png); }
+
+.icon-download-circle-teachor {
+  width: 20px;
+  height: 21px;
+  background-image: url(../images/icon-download-circle-teachor@2x.png); }
+
+.icon-download-circle-voicer {
+  width: 20px;
+  height: 21px;
+  background-image: url(../images/icon-download-circle-voicer@2x.png); }
 
 html {
   background-color: #F8F8F8; }
@@ -548,6 +561,13 @@ html, body {
     color: inherit;
     padding-right: 2em;
     cursor: pointer; }
+
+.i18n_selector.-dark {
+  color: #3b3e49; }
+  .i18n_selector.-dark::before {
+    background-image: url("../images/icon-language-dark@2x.png"); }
+  .i18n_selector.-dark::after {
+    background-image: url("../images/icon-dropdown-dark@2x.png"); }
 
 .card-general {
   display: inline-block;

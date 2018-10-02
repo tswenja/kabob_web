@@ -1,0 +1,89 @@
+body {
+  background-color: #ffffff;
+}
+.main {
+  padding-top: 64px;
+}
+.article {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 6.7% 8.6% 80px;
+}
+
+.text-dark {
+  color: #3b3e49;
+}
+.text-highlight,
+.text-highlight:hover,
+.text-highlight:active,
+.text-highlight:visited,
+.text-highlight:focus {
+  color: #70bdd4;
+}
+
+.button-gray {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.aritcle {
+  color: #3b3e49;
+}
+
+.title_fonts {
+  font-size: 54px;
+  font-weight: 300;
+}
+.content_fonts {
+  font-size: 13px;
+  font-weight: 500;
+}
+.title2_fonts {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.item-dashed {
+  padding-left: 1.5em;
+  line-height: 24px;
+}
+.item-dashed::before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  left: -1.5em;
+  width: 0.5em;
+  margin-right: -0.5em;
+  vertical-align: middle;
+  border-top: 1px solid #70bdd4;
+}
+
+.item-prefixed {
+  padding-left: 30px;
+  line-height: 24px;
+}
+.item-prefixed::before {
+  content: attr(data-prefix);
+  display: inline-block;
+  position: relative;
+  left: -30px;
+  width: 30px;
+  margin-right: -30px;
+  color: #70bdd4;
+}
+
+.header-effects-on .header-light .headbar,
+.mobilemenu-active .header-light .headbar {
+  background-color: #ffffff;
+}
+@media only screen and (max-width: 1023px) {
+  .header-light .mobilemenu-trigger > .trigger > .box > .bar,
+  .header-light .mobilemenu-trigger > .trigger.active > .box > .bar {
+    background-color: #3b3e49;
+  }
+  .header-light #mobilemenu.mobilemenu_override {
+    background-color: #ffffff;
+  }
+    .header-light #mobilemenu.mobilemenu_override .mobilemenu-bottom {
+      background-color: #ffffff;
+    }
+}
