@@ -141,27 +141,4 @@
     setTimeout(beatsLoop.bind(null, boxEl), delay);
   }
 
-
 }());
-
-Beats.init({
-  el: '#section_kv',
-  maxDeep: 4,
-  minDeep: 2,
-  getNextUpDots: function() {
-    var x = this.dotsAry.length,
-        y = this.dotsAry[0].length;
-    var randomOffsetX = Date.now() % Math.floor(x*0.35);
-    return [
-      this.dotsAry[Math.floor(x*0.25) - Date.now()%2][Math.floor(y*0.25) - 2 + Date.now()%2],
-      this.dotsAry[Math.floor(x*0.5) + randomOffsetX][Math.floor(y*0.25) - 1 - Date.now()%2],
-      this.dotsAry[Math.floor(x*0.8) + 1][Math.floor(y*0.4)],
-      this.dotsAry[Math.floor(x*0.75) + 1 - Date.now()%2][Math.floor(y*0.75) - 1],
-      this.dotsAry[Math.floor(x*0.5) + randomOffsetX + 1][Math.floor(y*0.75)],
-      this.dotsAry[Math.floor(x*0.35) + Date.now()%3][Math.floor(y*0.75)]
-    ];
-  }
-});
-Beats.init({
-  el: '#section_beats',
-});

@@ -11,7 +11,12 @@
     background-color: #f9ae0f;
   }
 </style>
-<div class="voicer_bg-beats" style="width: 100%; height: 100%">
+<div id="beats" style="width: 100%; height: 100%">
 </div>
 
 <script src="js/beats.js"></script>
+<script>
+  Beats.init({
+    el: '#beats',
+  });
+</script>
