@@ -1351,9 +1351,7 @@ html, body {
       background-size: 100% auto; } }
 
 .voicer_bg-beats {
-  position: relative;
-  background: #292929;
-  color: #ffffff; }
+  position: relative; }
   .voicer_bg-beats .dot {
     position: absolute;
     width: 25px;

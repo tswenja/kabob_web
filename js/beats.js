@@ -1,36 +1,54 @@
-(function(d) {
-  var c = d.querySelector('.voicer_bg-beats');
-  var dotSize = 25;
-  var dotGutterX = dotSize*0.62,
-      dotGutterY = dotSize*0.4,
-      dotSpaceW = dotSize*1.62,
-      dotSpaceH = dotSize*1.4;
+(function() {
+  window.Beats = window.Beats || {};
 
-  var x = Math.floor(c.clientWidth / (dotSpaceW)),
-      y = Math.floor(c.clientHeight / (dotSpaceH)),
-      linesOffset = dotSize*0.8;
-  var dotsAry = [[]];
+  Beats.init = function(options) {
+    var boxEl = document.querySelector(options.el);
+    boxEl.maxDeep = options.maxDeep || 6;
+    boxEl.minDeep = options.minDeep || 3;
+    boxEl.getNextUpDots = options.getNextUpDots || function() {
+      var x = this.dotsAry.length,
+          y = this.dotsAry[0].length;
+      var targetX = getRandomInt(x*0.60, x*0.40),
+          targetY = getRandomInt(y*0.60, y*0.40);
+      var targetX = Math.floor(x*0.5);
+          targetY = Math.floor(y*0.5);
+      return [this.dotsAry[targetX][targetY]];
+    };
 
-  for (var i=0; i<x; i++) {
-    dotsAry[i] = [];
-    for (var j=0; j<y; j++) {
-      var dot = d.createElement('div');
-      dot.classList.add('dot');
-      dot.style.left = (i * dotSpaceW + (j % 2) * linesOffset) - (dotSize*0.4) + "px";
-      dot.style.top = (j * dotSpaceH) + (dotSize*0.4) + "px";
-      dot.style.opacity = 0.02;
-      dot.cordX = i;
-      dot.cordY = j;
-      dot.upAt = null;
-      c.appendChild(dot);
-      dotsAry[i][j] = dot;
+    var dotSize = 25;
+    var dotGutterX = dotSize*0.62,
+        dotGutterY = dotSize*0.4,
+        dotSpaceW = dotSize*1.62,
+        dotSpaceH = dotSize*1.4;
+
+    var x = Math.floor(boxEl.clientWidth / (dotSpaceW)),
+        y = Math.floor(boxEl.clientHeight / (dotSpaceH)),
+        linesOffset = dotSize*0.8;
+    var elPaddingLeft = (boxEl.clientWidth - (x*dotSpaceW + linesOffset - dotGutterX)) / 2,
+        elPaddingTop = (boxEl.clientHeight - (y*dotSpaceH - dotGutterY)) / 2;
+    boxEl.dotsAry = [[]];
+
+    for (var i=0; i<x; i++) {
+      boxEl.dotsAry[i] = [];
+      for (var j=0; j<y; j++) {
+        var dot = document.createElement('div');
+        dot.classList.add('dot');
+        dot.style.left = (i * dotSpaceW + (j % 2) * linesOffset) + elPaddingLeft + "px";
+        dot.style.top = (j * dotSpaceH) + elPaddingTop + "px";
+        dot.style.opacity = 0.02;
+        dot.cordX = i;
+        dot.cordY = j;
+        dot.upAt = null;
+        boxEl.appendChild(dot);
+        boxEl.dotsAry[i][j] = dot;
+      }
     }
-  }
 
-  var spread = 10,
-      deep = 3;
+    beatsLoop(boxEl);
+    //beatUp3(boxEl, boxEl.dotsAry[Math.floor(x*0.5)][Math.floor(y*0.5)]);
+  };
 
-  beatUp3 = function(dot, deep) {
+  beatUp3 = function(boxEl, dot, deep) {
     deep = deep || 5;
 
     if ( level >= deep ) return;
@@ -41,7 +59,7 @@
       levels[level] = levels[level] || [];
       var seeds = levels[level-1] || [];
       for (var i=0; i<seeds.length; i++) {
-        var seed = dotsAry[seeds[i][0]][seeds[i][1]],
+        var seed = boxEl.dotsAry[seeds[i][0]][seeds[i][1]],
             lookupDirectionX,
             relatives = [];
         if ( seed.cordY % 2 == 0 ) {
@@ -61,7 +79,7 @@
           var rx = relatives[j][0], ry = relatives[j][1],
               rkey = [rx,ry].join();
           if (rx < 0 || ry < 0) continue;
-          if (rx >= x || ry >= y) continue;
+          if (rx >= boxEl.dotsAry.length || ry >= boxEl.dotsAry[0].length) continue;
           if (rkey in relativeDots) continue;
           levels[level].push(relatives[j]);
         }
@@ -74,17 +92,17 @@
     }
 
     // light up
-    spread = 10;
+    var spread = 10;
     for (var l=0; l<levels.length; l++) {
       var opacityUp = (function(t, b, c, d) {
         t = t / d;
-        return 1 / (c*t*t*t + b);
-      })(l+1, 0, 1, 1.8);
+        return 1 / (c*t*t*t*t + b);
+      })(l+1, 0, 1, deep*0.45);
       opacityUp = Math.min( opacityUp, 1);
-      opacityUp = opacityUp * (deep / 8);
+      //opacityUp = opacityUp * (deep / 8);
 
       for (var i=0; i<levels[l].length; i++) {
-        var target = dotsAry[levels[l][i][0]][levels[l][i][1]];
+        var target = boxEl.dotsAry[levels[l][i][0]][levels[l][i][1]];
         target.classList.add('up');
         target.style.transition = 'all 0s';
         target.style.opacity = opacityUp;
@@ -92,7 +110,7 @@
         var dismissDelay = 100 * opacityUp + spread;
         if (target.downTimer) clearTimeout(target.downTimer);
         target.downTimer = setTimeout( beatDown.bind(null, target), dismissDelay );
-        console.log(opacityUp, l);
+        //console.log(opacityUp, l);
       }
     }
   }
@@ -101,7 +119,9 @@
     dot.upAt = null;
     dot.downTimer = null;
     dot.classList.remove('up');
-    dot.style.transition = 'all 0.26s ease-in';
+    var duration = 0.16 + dot.style.opacity*1;
+    var duration = 0.26;
+    dot.style.transition = 'all ' + duration + 's ease-in';
     dot.style.opacity = 0.02;
   }
 
@@ -110,17 +130,38 @@
     return Math.floor(Math.random() * Math.floor(max-min)) + min;
   }
 
-  beatsLoop = function() {
-    var delay = Math.pow(getRandomInt(32, 1), 2) + 600;
-    var targetX = getRandomInt(x*0.60, x*0.40),
-        targetY = getRandomInt(y*0.60, y*0.40);
-    var targetX = Math.floor(x*0.5);
-        targetY = Math.floor(y*0.5);
-    setTimeout(beatUp3.bind(null,dotsAry[targetX][targetY], getRandomInt(10, 3)), delay);
-    setTimeout(beatsLoop, delay);
+  beatsLoop = function(boxEl) {
+    var delay = Math.pow(getRandomInt(32, 1), 2) + 400;
+    var deep = getRandomInt(boxEl.maxDeep, boxEl.minDeep);
+    var next = boxEl.getNextUpDots();
+    if (!Array.isArray(next)) next = [next];
+    for ( var n=0; n<next.length; n++) {
+      setTimeout(beatUp3.bind(null, boxEl, next[n], deep), delay);
+    }
+    setTimeout(beatsLoop.bind(null, boxEl), delay);
   }
-  beatsLoop();
-  //beatUp3(dotsAry[Math.floor(x*0.5)][Math.floor(y*0.5)]);
 
 
-}(document));
+}());
+
+Beats.init({
+  el: '#section_kv',
+  maxDeep: 4,
+  minDeep: 2,
+  getNextUpDots: function() {
+    var x = this.dotsAry.length,
+        y = this.dotsAry[0].length;
+    var randomOffsetX = Date.now() % Math.floor(x*0.35);
+    return [
+      this.dotsAry[Math.floor(x*0.25) - Date.now()%2][Math.floor(y*0.25) - 2 + Date.now()%2],
+      this.dotsAry[Math.floor(x*0.5) + randomOffsetX][Math.floor(y*0.25) - 1 - Date.now()%2],
+      this.dotsAry[Math.floor(x*0.8) + 1][Math.floor(y*0.4)],
+      this.dotsAry[Math.floor(x*0.75) + 1 - Date.now()%2][Math.floor(y*0.75) - 1],
+      this.dotsAry[Math.floor(x*0.5) + randomOffsetX + 1][Math.floor(y*0.75)],
+      this.dotsAry[Math.floor(x*0.35) + Date.now()%3][Math.floor(y*0.75)]
+    ];
+  }
+});
+Beats.init({
+  el: '#section_beats',
+});

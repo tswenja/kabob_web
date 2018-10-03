@@ -99,8 +99,9 @@
             <br>音樂播放器
           </h1>
         </div>
-        <figure class="kv_image">
-          <img class="img-fluid" src="images/voicer_image_1.png"
+        <figure class="kv_image" style="position:relative">
+          <div id="section_kv" class="voicer_bg-beats" style="position:absolute;top:-25%;left:-25%;width:150%;height:150%;"></div>
+          <img class="img-fluid" src="images/voicer_image_1.png" style="position:relative;z-index:10"
                srcset="images/voicer_image_1@2x.png 1396w,
                        images/voicer_image_1_m@2x.png 640w">
         </figure>
@@ -171,7 +172,7 @@
       </section>
     </section>
 
-    <section class="section-md section_px voicer_bg-beats voicer_bg-dark text-center">
+    <section id="section_beats" class="section-md section_px voicer_bg-beats voicer_bg-dark voicer_bg-dark text-center">
       <p class="h4_fonts mb-20px pb-md-2" data-aos="fade-up">
         <span class="d-inline-block">現在就開始<br>不放過塑造你的聲音形象</span>
       </p>
