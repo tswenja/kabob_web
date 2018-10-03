@@ -190,5 +190,12 @@
 
   <script src="vendor/aos-master/dist/aos.js"></script>
   <script src="js/header_effects.js"></script>
+  <script>
+    // Move footer to the bottom of window if the body height < window height.
+    window.addEventListener("load", function(event) {
+      var footer = document.querySelector('footer');
+      footer.style.transform = "translateY(" + Math.max(0, window.innerHeight - document.body.clientHeight) + "px)";
+    });
+  </script>
 </body>
 </html>
