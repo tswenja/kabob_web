@@ -1,11 +1,10 @@
 (function() {
   // Set current locale value.
-  var currentLocale = location.href.slice(8).split('/')[1];
-  if (['cn'].indexOf(currentLocale) >= 0) {
-    document.querySelectorAll('.i18n_selector > select > option[value='+currentLocale+']').forEach(function(option) {
+  document.querySelectorAll('.i18n_selector > select > option').forEach(function(option) {
+    if (location.pathname.indexOf(option.value) >= 0) {
       option.selected = true;
-    });
-  }
+    }
+  });
 
   // Enable element onchange.
   var hostName = location.protocol + '//' + location.host,
