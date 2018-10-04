@@ -1,7 +1,7 @@
 (function() {
   // Set current locale value.
   document.querySelectorAll('.i18n_selector > select > option').forEach(function(option) {
-    if (location.pathname.indexOf(option.value) >= 0) {
+    if (location.pathname.indexOf('/'+ option.value +'/') >= 0) {
       option.selected = true;
     }
   });
