@@ -74,7 +74,7 @@
           </div>
 
           <div class="mobile-only mobilemenu-bottom d-flex align-items-center">
-            <div class="i18n_selector" data-name="voicer.html">
+            <div class="i18n_selector">
               <select class="select">
                 <option value="tw">繁體中文</option>
                 <option value="cn">簡體中文</option>
@@ -339,7 +339,7 @@
       <div class="d-flex">
         <div class="desktop-only header_menu_bottom d-flex align-items-center">
           <div class="i18n_selector">
-            <select class="select hover-fade-in" data-name="voicer.html">
+            <select class="select hover-fade-in">
               <option value="tw">繁體中文</option>
               <option value="cn">簡體中文</option>
               <!--
@@ -360,6 +360,7 @@
   <script src="vendor/aos-master/dist/aos.js"></script>
   <script src="js/header_effects.js"></script>
   <script src="js/beats.js"></script>
+  <script src="js/i18n_selector.js"></script>
   <script>
     document.querySelector('.kv_image > img').onload = function() {
       Beats.init({
@@ -383,20 +384,6 @@
     };
     Beats.init({
       el: '#section_beats',
-    });
-  </script>
-  <script>
-    var currentLocale = location.href.slice(8).split('/')[1];
-    if (['cn'].indexOf(currentLocale) >= 0) {
-      document.querySelectorAll('.i18n_selector > select > option[value='+currentLocale+']').forEach(function(option) {
-        option.selected = true;
-      });
-    }
-    document.querySelectorAll('.i18n_selector > select').forEach(function(select) {
-      select.onchange = function() {
-        var locale = this.value == "tw" ? "" : "/" + this.value;
-        location.href = location.protocol + '//' + location.host + locale + '/' + this.getAttribute('data-name');
-      };
     });
   </script>
 
