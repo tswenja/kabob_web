@@ -6,24 +6,24 @@
   <title>Kabob</title>
   <meta content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no' name=viewport>
 
-  <link rel="stylesheet" href="css/reset.css"/>
-  <link href="vendor/bootstrap-4.1.3-dist/css/bootstrap.min.css" rel=stylesheet />
-  <link href="vendor/aos-master/dist/aos.css" rel=stylesheet />
-  <link href="css/app.css" rel=stylesheet />
-  <link href="css/header_effects.css" rel=stylesheet />
+  <link rel="stylesheet" href="../css/reset.css"/>
+  <link href="../vendor/bootstrap-4.1.3-dist/css/bootstrap.min.css" rel=stylesheet />
+  <link href="../vendor/aos-master/dist/aos.css" rel=stylesheet />
+  <link href="../css/app.css" rel=stylesheet />
+  <link href="../css/header_effects.css" rel=stylesheet />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="vendor/js/parallax.min.js"></script>
+  <script src="../vendor/js/parallax.min.js"></script>
 
-  <script src="vendor/HeaderEffects/js/waypoints.min.js"></script>
+  <script src="../vendor/HeaderEffects/js/waypoints.min.js"></script>
 
   <!-- sidebar -->
-  <link rel="stylesheet" href="vendor/sidebar/css/jquery.mobilemenu.css">
-  <script id="mobilemenu" src="vendor/sidebar/js/jquery.mobilemenu.js"></script>
+  <link rel="stylesheet" href="../vendor/sidebar/css/jquery.mobilemenu.css">
+  <script id="mobilemenu" src="../vendor/sidebar/js/jquery.mobilemenu.js"></script>
 
   <!-- slick -->
-  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css"/>
-  <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../vendor/slick/slick.css"/>
+  <script type="text/javascript" src="../vendor/slick/slick.min.js"></script>
 </head>
 <body>
   <header>
@@ -31,9 +31,9 @@
 
       <div class="headbar">
         <div class="h-100 d-flex align-items-center">
-          <img class="logo_img" src="images/kabob_logo.svg" alt="Lookr" />
+          <img class="logo_img" src="../images/kabob_logo.svg" alt="Lookr" />
           <button type="button" class="btn btn-link d-lg-block d-none">
-            <img class="products_img" src="images/products_icon.svg" alt="kabob products" />
+            <img class="products_img" src="../images/products_icon.svg" alt="kabob products" />
           </button>
 
           <div class="ml-auto">
@@ -80,10 +80,12 @@
           <div class="mobile-only mobilemenu-bottom d-flex align-items-center">
             <div class="i18n_selector">
               <select class="select">
-                <option>繁體中文</option>
-                <option>簡體中文</option>
-                <option>English</option>
-                <option>日本語</option>
+                <option value="tw">繁體中文</option>
+                <option value="cn">簡體中文</option>
+                <option value="en">English</option>
+                <!--
+                <option value="jp">日本語</option>
+                -->
               </select>
             </div>
           </div>
@@ -102,14 +104,14 @@
             Kabob CMS<br>新零售内容<br>管理赋能平台
           </h1>
           <p>
-            重新定義連鎖門店運營
+            重新定义连锁门店运营
           </p>
         </div>
         <div class="kv_images">
-          <img class="kv_image" src="images/kabob_image_kv.png"
-               srcset="images/kabob_image_kv@0.5x.png 367w,
-                       images/kabob_image_kv.png 734w,
-                       images/kabob_image_kv@2x.png 1468w">
+          <img class="kv_image" src="../images/kabob_image_kv.png"
+               srcset="../images/kabob_image_kv@0.5x.png 367w,
+                       ../images/kabob_image_kv.png 734w,
+                       ../images/kabob_image_kv@2x.png 1468w">
         </div>
       </div>
     </section>
@@ -133,21 +135,21 @@
             <div class="mb-20px mx-2" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps" data-aos-delay="200">
               <div class="mobile-only aos-anchor-apps1"></div>
               <div class="card card-general kabob_app kabob_app_fonts" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps1">
-                <h1 class="product">數位看板雲服務</h1><img class="platform_icon" src="pic/lookr_sk.png" alt=""/>
+                <h1 class="product">数字看板云服务</h1><img class="platform_icon" src="pic/lookr_sk.png" alt=""/>
                 <p class="e_name">Lookr</p>
                 <p class="c_name">盼盼</p>
                 <div class="ha-waypoint" data-animate-down="header-show" data-animate-up="header-hide"></div>
-                <p class="intro">跨平台，多維度，輕鬆管理多門店屏幕，新媒體更創意</p>
+                <p class="intro">跨平台，多纬度，轻松管理多门店屏幕，新媒体更创意</p>
                 <a href="lookr.html" class="btn text-white more more1 hover-lighter">了解更多</a>
               </div>
             </div>
             <div class="mb-20px mx-2" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps" data-aos-delay="250">
               <div class="mobile-only aos-anchor-apps2"></div>
               <div class="card card-general kabob_app kabob_app_fonts" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps2">
-                <h1 class="product">音訊公播</h1><img class="platform_icon" src="pic/voicer_sk.png" alt=""/>
+                <h1 class="product">音讯公播</h1><img class="platform_icon" src="pic/voicer_sk.png" alt=""/>
                 <p class="e_name">Voicer</p>
-                <p class="c_name">樂樂</p>
-                <p class="intro">簡單一鍵式發布店內BGM排期，您最好的音訊公播管家</p>
+                <p class="c_name">乐乐</p>
+                <p class="intro">简单一键式发布店内BGM排期，您最好的音讯公播管家</p>
                 <a href="voicer.html" class="btn text-white more more2 hover-lighter">了解更多</a>
               </div>
             </div>
@@ -156,20 +158,20 @@
             <div class="mb-20px mx-2" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps" data-aos-delay="300">
               <div class="mobile-only aos-anchor-apps3"></div>
               <div class="card card-general kabob_app kabob_app_fonts" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps3">
-                <h1 class="product">作業教程</h1><img class="platform_icon" src="pic/teachor_sk.png" alt=""/>
+                <h1 class="product">作业教程</h1><img class="platform_icon" src="pic/teachor_sk.png" alt=""/>
                 <p class="e_name">Teachor</p>
-                <p class="c_name">學學</p>
-                <p class="intro md_width">全過程資料管理專家，在線瀏覽，簡單便捷，沒有地區限制，有網的地方就能辦公</p>
+                <p class="c_name">学学</p>
+                <p class="intro md_width">全过程资料管理专家，在线浏览，简单迅捷，没有地域限制，有网的地方就能办公</p>
                 <a href="teachor.html" class="btn text-white more more3 hover-lighter">了解更多</a>
               </div>
             </div>
             <div class="mb-20px mx-2" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps" data-aos-delay="350">
               <div class="mobile-only aos-anchor-apps4"></div>
               <div class="card card-general kabob_app kabob_app_fonts" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps4">
-                <h1 class="product">出圖高手</h1><img class="platform_icon" src="pic/kabob_sk.png" alt=""/>
+                <h1 class="product">出图高手</h1><img class="platform_icon" src="pic/kabob_sk.png" alt=""/>
                 <p class="e_name">Kabob</p>
                 <p class="c_name">串串</p>
-                <p class="intro">零基礎也能做出高逼格的電子海報，重新定義宣傳模式</p>
+                <p class="intro">零基础也能作出高逼格电子海报，无需编程，在线交互设计神器</p>
                 <a href="#" class="btn text-white more more4 hover-lighter">了解更多</a>
               </div>
             </div>
@@ -187,11 +189,11 @@
                 強大功能
               </h3>
               <p class="desc_fonts mb-20px mb-md-4">
-                優點與特色功能，如何好操作、<br>擴充性高、支援多裝置等等
+                优点与特色功能，如何好操作、扩充性高、支援多装置等等
               </p>
             </div>
             <div class="kabob_features_image" data-aos="zoom-in-right" data-aos-anchor=".aos-anchor-features-title">
-              <img class="img-fluid" src="images/kabob_image_1.png" alt=""/>
+              <img class="img-fluid" src="../images/kabob_image_1.png" alt=""/>
             </div>
           </div>
 
@@ -204,8 +206,8 @@
                   <div class="d-flex align-items-center" data-aos="fade-up" data-aos-anchor=".aos-anchor-features" data-aos-delay="100">
                     <div class="kabob_feature_icon"><img class="img-fluid" src="pic/f1.png" alt=""/></div>
                     <div class="">
-                      <h5 class="kabob_feature_title _fonts">所見即所得</h5>
-                      <p class="kabob_feature_desc _fonts mb-0">操作介面簡單清爽，輕鬆完成操作</p>
+                      <h5 class="kabob_feature_title _fonts">所见即所得</h5>
+                      <p class="kabob_feature_desc _fonts mb-0">操作界面简单清爽，轻松完成操作</p>
                     </div>
                   </div>
                 </div>
@@ -214,8 +216,8 @@
                   <div class="d-flex align-items-center" data-aos="fade-up" data-aos-anchor=".aos-anchor-features" data-aos-delay="150">
                     <div class="kabob_feature_icon"><img class="img-fluid" src="pic/f3.png" alt=""/></div>
                     <div class="">
-                      <h5 class="kabob_feature_title _fonts">門店播放</h5>
-                      <p class="kabob_feature_desc _fonts mb-0">任何時候都可以緊急插入公播內容</p>
+                      <h5 class="kabob_feature_title _fonts">门店公播</h5>
+                      <p class="kabob_feature_desc _fonts mb-0">任何时候都可以紧急插入公播内容</p>
                     </div>
                   </div>
                 </div>
@@ -224,8 +226,8 @@
                   <div class="d-flex align-items-center" data-aos="fade-up" data-aos-anchor=".aos-anchor-features" data-aos-delay="200">
                     <div class="kabob_feature_icon"><img class="img-fluid" src="pic/f5.png" alt=""/></div>
                     <div class="">
-                      <h5 class="kabob_feature_title _fonts">團隊協作工作</h5>
-                      <p class="kabob_feature_desc _fonts mb-0">實現多人協同工作，編輯，交流</p>
+                      <h5 class="kabob_feature_title _fonts">团队协同工作</h5>
+                      <p class="kabob_feature_desc _fonts mb-0">支持多人协同工作，编辑，交流</p>
                     </div>
                   </div>
                 </div>
@@ -234,8 +236,8 @@
                   <div class="d-flex align-items-center" data-aos="fade-up" data-aos-anchor=".aos-anchor-features" data-aos-delay="250">
                     <div class="kabob_feature_icon"><img class="img-fluid" src="pic/f7.png" alt=""/></div>
                     <div class="">
-                      <h5 class="kabob_feature_title _fonts">新媒體營銷</h5>
-                      <p class="kabob_feature_desc _fonts mb-0">完善的新媒體互動營銷體系，提升營銷轉換率</p>
+                      <h5 class="kabob_feature_title _fonts">新媒体营销</h5>
+                      <p class="kabob_feature_desc _fonts mb-0">完善的新媒体互动营销体系，提升营销转化率</p>
                     </div>
                   </div>
                 </div>
@@ -292,7 +294,7 @@
     </section>
 
     <section class="section-md bg-video kabob_video_section fix-aos-overflow">
-      <video class="__video" autoplay loop poster="images/kabob_bg_1.png">
+      <video class="__video" autoplay loop poster="../images/kabob_bg_1.png">
         <source src="video.webm" type="video/webm">
       </video>
       <div class="section_px-kabob text-right">
@@ -329,7 +331,7 @@
               <li class="kabob_static_number mb-20px mx-4 ml-lg-0" data-aos="zoom-in" data-aos-anchor=".aos-anchor-usage1">
                 <div class="mobile-only aos-anchor-usage1"></div>
                 <div class="__number">100M</div>
-                <div>個裝置連接</div>
+                <div>个装置连接</div>
               </li>
               <li class="kabob_static_number mb-20px mx-4 mr-lg-0" data-aos="zoom-in" data-aos-anchor=".aos-anchor-usage2">
                 <div class="mobile-only aos-anchor-usage2"></div>
@@ -344,34 +346,34 @@
       <section class="d-flex flex-wrap justify-content-center" style="overflow:hidden" data-aos="fade-up">
         <div class="slicker-autoplay kabob_usecases_slicker">
           <div class="kabob_usecase">
-            <img class="img-cover" src="images/kabob_c1.JPG" alt="">
+            <img class="img-cover" src="../images/kabob_c1.JPG" alt="">
           </div>
           <div class="kabob_usecase">
-            <img class="img-cover" src="images/kabob_c2.JPG" alt="">
+            <img class="img-cover" src="../images/kabob_c2.JPG" alt="">
           </div>
           <div class="kabob_usecase">
-            <img class="img-cover" src="images/kabob_c3.JPG" alt="">
+            <img class="img-cover" src="../images/kabob_c3.JPG" alt="">
           </div>
           <div class="kabob_usecase">
-            <img class="img-cover" src="images/kabob_c4.JPG" alt="">
+            <img class="img-cover" src="../images/kabob_c4.JPG" alt="">
           </div>
           <div class="kabob_usecase">
-            <img class="img-cover" src="images/kabob_c5.JPG" alt="">
+            <img class="img-cover" src="../images/kabob_c5.JPG" alt="">
           </div>
           <div class="kabob_usecase">
-            <img class="img-cover" src="images/kabob_c6.JPG" alt="">
+            <img class="img-cover" src="../images/kabob_c6.JPG" alt="">
           </div>
           <div class="kabob_usecase">
-            <img class="img-cover" src="images/kabob_c7.JPG" alt="">
+            <img class="img-cover" src="../images/kabob_c7.JPG" alt="">
           </div>
           <div class="kabob_usecase">
-            <img class="img-cover" src="images/kabob_c8.JPG" alt="">
+            <img class="img-cover" src="../images/kabob_c8.JPG" alt="">
           </div>
           <div class="kabob_usecase">
-            <img class="img-cover" src="images/kabob_c9.jpeg" alt="">
+            <img class="img-cover" src="../images/kabob_c9.jpeg" alt="">
           </div>
           <div class="kabob_usecase">
-            <img class="img-cover" src="images/kabob_c10.jpeg" alt="">
+            <img class="img-cover" src="../images/kabob_c10.jpeg" alt="">
           </div>
         </div>
       </section>
@@ -383,23 +385,23 @@
         <div class="section_px-kabob">
           <div class="text-center mb-30px pb-md-4" data-aos="fade-up">
             <h3 class="h3_fonts">
-              遍佈各地的服務
+              遍布各地的服务
             </h3>
             <p class="desc_fonts mb-20px mb-md-4">
-              中國、台灣、日本、新加坡等等
+              中国、台湾、日本、新加坡等等
             </p>
           </div>
         </div>
         <div class="fix-aos-overflow aos-anchor-map" data-aos="zoom-out-up" data-aos-delay="100">
           <figure class="mx-auto kabob_map_figure">
-            <img class="img-fluid" src="images/worldmap_draw.png" alt=""/>
-            <img class="kabob_map_spot china" src="images/location_tag01.png"
+            <img class="img-fluid" src="../images/worldmap_draw.png" alt=""/>
+            <img class="kabob_map_spot china" src="../images/location_tag01.png"
                  data-aos="zoom-in" data-aos-anchor=".aos-anchor-map" data-aos-delay="400">
-            <img class="kabob_map_spot japan" src="images/location_tag02.png"
+            <img class="kabob_map_spot japan" src="../images/location_tag02.png"
                  data-aos="zoom-in" data-aos-anchor=".aos-anchor-map" data-aos-delay="500">
-            <img class="kabob_map_spot taiwan" src="images/location_tag03.png"
+            <img class="kabob_map_spot taiwan" src="../images/location_tag03.png"
                  data-aos="zoom-in" data-aos-anchor=".aos-anchor-map" data-aos-delay="600">
-            <img class="kabob_map_spot singapore" src="images/location_tag04.png"
+            <img class="kabob_map_spot singapore" src="../images/location_tag04.png"
                  data-aos="zoom-in" data-aos-anchor=".aos-anchor-map" data-aos-delay="700">
           </figure>
         </div>
@@ -409,14 +411,14 @@
     <section class="desktop-only section-lg bg-white fix-aos-overflow">
       <div class="kabob_section_width"><div class="section_px-kabob">
         <h3 class="mb-30px pb-3 text-center h3_fonts" data-aos="fade-up">
-          應用下載
+          应用下载
         </h3>
 
         <ul class="row no-gutters kabob_app_downloads">
           <li class="col-sm-3 px-3">
             <div class="card card-general w-100 text-center kabob_app_download" data-aos="zoom-in" data-aos-delay="100">
               <div class="kabob_app_icon">
-                <img class="img-fluid" src="images/lookr_app_icon.svg" alt="Lookr App"/>
+                <img class="img-fluid" src="../images/lookr_app_icon.svg" alt="Lookr App"/>
               </div>
               <h5 class="kabob_app_title">Lookr</h5>
               <p class="kabob_app_desc">windows</p>
@@ -428,7 +430,7 @@
           <li class="col-sm-3 px-3">
             <div class="card card-general w-100 text-center kabob_app_download" data-aos="zoom-in" data-aos-delay="100">
               <div class="kabob_app_icon">
-                <img class="img-fluid" src="images/lookr_app_icon.svg" alt="Lookr App"/>
+                <img class="img-fluid" src="../images/lookr_app_icon.svg" alt="Lookr App"/>
               </div>
               <h5 class="kabob_app_title">Lookr</h5>
               <p class="kabob_app_desc">windows</p>
@@ -440,7 +442,7 @@
           <li class="col-sm-3 px-3">
             <div class="card card-general w-100 text-center kabob_app_download" data-aos="zoom-in" data-aos-delay="100">
               <div class="kabob_app_icon">
-                <img class="img-fluid" src="images/voicer_app_icon.svg" alt="Voicer App"/>
+                <img class="img-fluid" src="../images/voicer_app_icon.svg" alt="Voicer App"/>
               </div>
               <h5 class="kabob_app_title">Lookr</h5>
               <p class="kabob_app_desc">windows</p>
@@ -452,7 +454,7 @@
           <li class="col-sm-3 px-3">
             <div class="card card-general w-100 text-center kabob_app_download" data-aos="zoom-in" data-aos-delay="100">
               <div class="kabob_app_icon">
-                <img class="img-fluid" src="images/lookr_app_icon.svg" alt="Lookr App"/>
+                <img class="img-fluid" src="../images/lookr_app_icon.svg" alt="Lookr App"/>
               </div>
               <h5 class="kabob_app_title">Voicer</h5>
               <p class="kabob_app_desc">Android</p>
@@ -469,7 +471,7 @@
   <footer>
     <div class="footer kabob_bg-footer">
       <div class="mb-5 pb-2 mb-md-3 pb-md-1">
-        <img src="images/kabob_logo.svg" class="float-left">
+        <img src="../images/kabob_logo.svg" class="float-left">
 
         <ul class="text-right">
           <li class="mb-3 mb-md-0 d-md-inline-block ml-md-4 pl-md-1">
@@ -489,10 +491,10 @@
 
       <div class="text-right mb-3 pb-md-2">
         <a href="tel:" class="icon icon-circle hover-lighter mr-10px">
-          <image src="images/call_btn.svg">
+          <image src="../images/call_btn.svg">
         </a>
         <a href="mailto:hello@kabob.cc" class="icon icon-circle hover-lighter">
-          <image src="images/mail_btn.svg">
+          <image src="../images/mail_btn.svg">
         </a>
       </div>
 
@@ -500,10 +502,12 @@
         <div class="desktop-only header_menu_bottom d-flex align-items-center">
           <div class="i18n_selector">
             <select class="select hover-fade-in">
-              <option>繁體中文</option>
-              <option>簡體中文</option>
-              <option>English</option>
-              <option>日本語</option>
+              <option value="tw">繁體中文</option>
+              <option value="cn">簡體中文</option>
+              <option value="en">English</option>
+              <!--
+              <option value="jp">日本語</option>
+              -->
             </select>
           </div>
         </div>
@@ -515,8 +519,9 @@
     </div>
   </footer>
 
-  <script src="vendor/aos-master/dist/aos.js"></script>
-  <script src="js/header_effects.js"></script>
+  <script src="../vendor/aos-master/dist/aos.js"></script>
+  <script src="../js/header_effects.js"></script>
+  <script src="../js/i18n_selector.js"></script>
   <script>
     // slick init
     $(document).ready(function(){
@@ -531,4 +536,3 @@
   </script>
 
 </html>
-
