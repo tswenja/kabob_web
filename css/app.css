@@ -952,11 +952,14 @@ html, body {
   .section-kv-lookr .kv_images {
     text-align: center;
     width: 100%;
-    max-width: 632px;
-    padding-left: 10px; }
+    max-width: 734px;
+    padding-left: 26px; }
+    @media only screen and (min-width: 768px) {
+      .section-kv-lookr .kv_images {
+        padding-left: 0; } }
     .section-kv-lookr .kv_images .kv_image {
       width: 100%;
-      min-width: 365px; }
+      min-width: 358px; }
 
 .lookr_intro_images_w {
   max-width: 920px; }
