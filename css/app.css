@@ -151,6 +151,26 @@ button {
   height: 21px;
   background-image: url(../images/icon-download-circle-voicer@2x.png); }
 
+.header-kabob .header_switch:not(.header_case-kabob) {
+  display: none; }
+.header-kabob .header_button-default {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+.header-lookr .header_switch:not(.header_case-lookr) {
+  display: none; }
+.header-lookr .header_button-default {
+  background-color: #09a8be; }
+
+.header-voicer .header_switch:not(.header_case-voicer) {
+  display: none; }
+.header-voicer .header_button-default {
+  background-color: #f9ae0f; }
+
+.header-teachor .header_switch:not(.header_case-teachor) {
+  display: none; }
+.header-teachor .header_button-default {
+  background-color: #294af6; }
+
 html {
   background-color: #F8F8F8; }
 
@@ -348,8 +368,17 @@ html, body {
     .footer {
       padding: 30px 40px 20px; } }
 
-.footer-lookr {
+.style-kabob .footer_bg {
+  background-color: #70bdd4; }
+
+.style-voicer .footer_bg {
+  background-color: #fbc95e; }
+
+.style-lookr .footer_bg {
   background-color: #09a8be; }
+
+.style-teachor .footer_bg {
+  background-color: #7280c8; }
 
 .copyright_fonts {
   font-size: 12px;
@@ -667,9 +696,6 @@ html, body {
  * Kabob
  *
  */
-.kabob_bg-footer {
-  background-color: #70bdd4; }
-
 .kabob_bg-dark {
   background: linear-gradient(180deg, #21232a 0%, #3b3e49 100%); }
 
@@ -1209,9 +1235,6 @@ html, body {
 .teachor_bg-black {
   background-color: #292929; }
 
-.teachor_bg-fade {
-  background-color: #7280c8; }
-
 .teachor_learning_step {
   width: 270px; }
   .teachor_learning_step .teachor_flow_image {
@@ -1376,9 +1399,6 @@ html, body {
     overflow: hidden;
     background-color: #f9ae0f;
     opacity: 0.02; }
-
-.voicer_bg-footer {
-  background-color: #fbc95e; }
 
 .voicer_image-sketch1 {
   width: 88%;
