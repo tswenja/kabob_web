@@ -368,7 +368,7 @@ html, body {
     .footer {
       padding: 30px 40px 20px; } }
 
-.style-kabob .footer_bg {
+.footer_bg, .style-kabob .footer_bg {
   background-color: #70bdd4; }
 
 .style-voicer .footer_bg {
