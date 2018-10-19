@@ -533,6 +533,11 @@ html, body {
     min-height: 108px;
     padding-top: 27px;
     text-align: center; }
+  .pricing_plan .pricing_desc {
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 0 1em;
+    text-align: center; }
   .pricing_plan .choose_button {
     display: inline-block;
     width: 100%;
@@ -556,9 +561,9 @@ html, body {
   .pricing_plan .feature {
     margin: 10px 30px; }
     .pricing_plan .feature:first-child {
-      margin-top: 20px; }
+      margin-top: 30px; }
     .pricing_plan .feature:last-child {
-      margin-bottom: 20px; }
+      margin-bottom: 30px; }
   .pricing_plan .text-price {
     font-size: 36px;
     font-weight: 600; }
