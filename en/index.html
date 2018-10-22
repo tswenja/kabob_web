@@ -38,10 +38,10 @@
     <section class="section-kv-kabob text-white d-flex align-items-center">
       <div class="content_width">
         <div class="kv_desc">
-          <h1 class="kv_fonts-title mx-auto mb-4">
+          <h1 class="kv_fonts-title mx-auto mb-4 px-2 px-md-0">
             Kabob CMS<br>New Retail Content<br>Management Empowerment Platform
           </h1>
-          <p>
+          <p class="px-2 px-md-0">
             New definition of chain store operation
           </p>
         </div>
@@ -74,7 +74,8 @@
             <div class="mb-20px mx-2" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps" data-aos-delay="200">
               <div class="mobile-only aos-anchor-apps1"></div>
               <div class="card card-general kabob_app kabob_app_fonts" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps1">
-                <h1 class="product">Digital Signage Service</h1><img class="platform_icon" src="../pic/lookr_sk.png" alt=""/>
+                <h4 class="product">Digital Signage Service</h4>
+                <img class="platform_icon" src="../pic/lookr_sk.png" alt=""/>
                 <p class="e_name">Lookr</p>
                 <p class="c_name"></p>
                 <div class="ha-waypoint" data-animate-down="header-show" data-animate-up="header-hide"></div>
@@ -85,7 +86,8 @@
             <div class="mb-20px mx-2" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps" data-aos-delay="250">
               <div class="mobile-only aos-anchor-apps2"></div>
               <div class="card card-general kabob_app kabob_app_fonts" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps2">
-                <h1 class="product">Music and Broadcast</h1><img class="platform_icon" src="../pic/voicer_sk.png" alt=""/>
+                <h4 class="product">Music and Broadcast</h4>
+                <img class="platform_icon" src="../pic/voicer_sk.png" alt=""/>
                 <p class="e_name">Voicer</p>
                 <p class="c_name"></p>
                 <p class="intro">Play BGM with one easy step, Your best music broadcast manager</p>
@@ -97,7 +99,8 @@
             <div class="mb-20px mx-2" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps" data-aos-delay="300">
               <div class="mobile-only aos-anchor-apps3"></div>
               <div class="card card-general kabob_app kabob_app_fonts" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps3">
-                <h1 class="product">Tutorial Documents</h1><img class="platform_icon" src="../pic/teachor_sk.png" alt=""/>
+                <h4 class="product">Tutorial Documents</h4>
+                <img class="platform_icon" src="../pic/teachor_sk.png" alt=""/>
                 <p class="e_name">Teachor</p>
                 <p class="c_name"></p>
                 <p class="intro md_width">Full process documents expert manager, Online viewing, Fast and easy, No area limitation, Use it everywhere with internet</p>
@@ -107,7 +110,8 @@
             <div class="mb-20px mx-2" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps" data-aos-delay="350">
               <div class="mobile-only aos-anchor-apps4"></div>
               <div class="card card-general kabob_app kabob_app_fonts" data-aos="zoom-in-up" data-aos-anchor=".aos-anchor-apps4">
-                <h1 class="product">Poster Creater</h1><img class="platform_icon" src="../pic/kabob_sk.png" alt=""/>
+                <h4 class="product">Poster Creater</h4>
+                <img class="platform_icon" src="../pic/kabob_sk.png" alt=""/>
                 <p class="e_name">Kabob</p>
                 <p class="c_name"></p>
                 <p class="intro">Create high quality digital poster with no experience, No program needed, Design with others together online</p>
@@ -270,12 +274,12 @@
               <li class="kabob_static_number kabob_static_numbers_gutter ml-lg-0" data-aos="zoom-in" data-aos-anchor=".aos-anchor-usage1">
                 <div class="mobile-only aos-anchor-usage1"></div>
                 <div>Brands Used</div>
-                <div class="__number">300+</div>
+                <div class="__number animationNumberWithPlus" data-number="300">&nbsp;</div>
               </li>
               <li class="kabob_static_number kabob_static_numbers_gutter mr-lg-0" data-aos="zoom-in" data-aos-anchor=".aos-anchor-usage2">
                 <div class="mobile-only aos-anchor-usage2"></div>
                 <div>Connected Devices</div>
-                <div class="__number">30,000+</div>
+                <div class="__number animationNumberWithPlus" data-number="30000">&nbsp;</div>
               </li>
             </ul>
           </div>
@@ -425,6 +429,31 @@
         autoplaySpeed: 1600
       });
     });
+  </script>
+
+  <script src="../vendor/js/jquery.animateNumber.min.js"></script>
+  <script>
+    $('.animationNumberWithPlus').each(function(index, el) {
+      $(el).waypoint( function( direction )  {
+        if (direction == 'down') {
+          if (el.innerText.indexOf("+") >= 0) {
+            return;
+          }
+          setTimeout(function() {
+            $(el).animateNumber(
+              {
+                number: $(el).attr('data-number'),
+                numberStep: $.animateNumber.numberStepFactories.separator(',')
+              },
+              "1500",
+              function() {
+                el.innerText = el.innerText + "+";
+              }
+            );
+          }, 600);
+        }
+      }, { offset: '100%' });
+    })
   </script>
 
 </html>

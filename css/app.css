@@ -478,6 +478,11 @@ html, body {
   @media only screen and (min-width: 768px) {
     .kv_fonts-title {
       font-size: 72px; } }
+  .kv_fonts-title.--small {
+    font-size: 36px; }
+    @media only screen and (min-width: 768px) {
+      .kv_fonts-title.--small {
+        font-size: 54px; } }
 
 .kv_images {
   overflow: hidden; }
@@ -633,12 +638,12 @@ html, body {
   font-weight: 500; }
 
 .product {
+  display: inline-block;
   color: #70bdd4;
   font-size: 14px;
   border: 2px solid #09A8BE;
   border-radius: 6px;
-  padding: 8px;
-  width: 130px;
+  padding: 8px 12px;
   text-align: center;
   margin: 0 auto; }
 

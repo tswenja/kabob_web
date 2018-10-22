@@ -322,6 +322,10 @@ $header_menu_bottom_height: 88px
   color: #ffffff
   @include breakpoint(md)
     font-size: 72px
+  &.--small
+    font-size: 36px
+    @include breakpoint(md)
+      font-size: 54px
 
 .kv_images
   overflow: hidden
@@ -482,12 +486,12 @@ $header_menu_bottom_height: 88px
   font-weight: 500
 
 .product
+  display: inline-block
   color: $color_blue
   font-size: 14px
   border: 2px solid #09A8BE
   border-radius: 6px
-  padding: 8px
-  width: 130px
+  padding: 8px 12px
   text-align: center
   margin: 0 auto
 
