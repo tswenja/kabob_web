@@ -270,12 +270,12 @@
               <li class="kabob_static_number kabob_static_numbers_gutter ml-lg-0" data-aos="zoom-in" data-aos-anchor=".aos-anchor-usage1">
                 <div class="mobile-only aos-anchor-usage1"></div>
                 <div>品牌連鎖超過</div>
-                <div class="__number">300+</div>
+                <div class="__number animationNumberWithPlus" data-number="300">&nbsp;</div>
               </li>
               <li class="kabob_static_number kabob_static_numbers_gutter mr-lg-0" data-aos="zoom-in" data-aos-anchor=".aos-anchor-usage2">
                 <div class="mobile-only aos-anchor-usage2"></div>
                 <div>裝置連接數超過</div>
-                <div class="__number">30,000+</div>
+                <div class="__number animationNumberWithPlus" data-number="30000">&nbsp;</div>
               </li>
             </ul>
           </div>
@@ -424,6 +424,31 @@
         autoplaySpeed: 1600
       });
     });
+  </script>
+
+  <script src="vendor/js/jquery.animateNumber.min.js"></script>
+  <script>
+    $('.animationNumberWithPlus').each(function(index, el) {
+      $(el).waypoint( function( direction )  {
+        if (direction == 'down') {
+          if (el.innerText.indexOf("+") >= 0) {
+            return;
+          }
+          setTimeout(function() {
+            $(el).animateNumber(
+              {
+                number: $(el).attr('data-number'),
+                numberStep: $.animateNumber.numberStepFactories.separator(',')
+              },
+              "1500",
+              function() {
+                el.innerText = el.innerText + "+";
+              }
+            );
+          }, 600);
+        }
+      }, { offset: '100%' });
+    })
   </script>
 
 </html>
