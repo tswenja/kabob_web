@@ -1084,23 +1084,24 @@ $kabob_section_px: 8.6%
   background-color: #292929
 
 .teachor_learning_step
-  width: 270px
+  width: 51%
+  min-width: 270px
 
   .teachor_flow_image
     width: 70px
 
-  @include breakpoint(735px)
-    width: 130px
-    margin-left: 35px
-    margin-right: 35px
+  @include breakpoint(md)
+    width: 220px
+    min-width: 220px
     text-align: center
 
     .teachor_flow_image
       width: 130px
+      height: 130px
+      margin: 0 auto
 
   @include breakpoint(900px)
-    margin-left: 55px
-    margin-right: 55px
+    width: 250px
 
     .teachor_flow_image
       position: relative
@@ -1147,6 +1148,7 @@ $kabob_section_px: 8.6%
 
 .teachor_hexagonbox
   margin: 10px
+  width: 240px
   min-width: 240px
   min-height: 275px
   background: url(../images/teachor_bg_hexagon.svg) no-repeat center
@@ -1161,10 +1163,8 @@ $kabob_section_px: 8.6%
     padding-top: 70px
 
 .hexagonbox_title
-  margin-bottom: 30px
   font-size: 18px
   @include breakpoint(md)
-    margin-bottom: 40px
     font-size: 22px
 
 

@@ -1249,21 +1249,22 @@ html, body {
   background-color: #292929; }
 
 .teachor_learning_step {
-  width: 270px; }
+  width: 51%;
+  min-width: 270px; }
   .teachor_learning_step .teachor_flow_image {
     width: 70px; }
-  @media only screen and (min-width: 735px) {
+  @media only screen and (min-width: 768px) {
     .teachor_learning_step {
-      width: 130px;
-      margin-left: 35px;
-      margin-right: 35px;
+      width: 220px;
+      min-width: 220px;
       text-align: center; }
       .teachor_learning_step .teachor_flow_image {
-        width: 130px; } }
+        width: 130px;
+        height: 130px;
+        margin: 0 auto; } }
   @media only screen and (min-width: 900px) {
     .teachor_learning_step {
-      margin-left: 55px;
-      margin-right: 55px; }
+      width: 250px; }
       .teachor_learning_step .teachor_flow_image {
         position: relative; }
       .teachor_learning_step .deco-after::after {
@@ -1306,6 +1307,7 @@ html, body {
 
 .teachor_hexagonbox {
   margin: 10px;
+  width: 240px;
   min-width: 240px;
   min-height: 275px;
   background: url(../images/teachor_bg_hexagon.svg) no-repeat center;
@@ -1321,11 +1323,9 @@ html, body {
       padding-top: 70px; } }
 
 .hexagonbox_title {
-  margin-bottom: 30px;
   font-size: 18px; }
   @media only screen and (min-width: 768px) {
     .hexagonbox_title {
-      margin-bottom: 40px;
       font-size: 22px; } }
 
 .teachor_feature_figure-3layers,
