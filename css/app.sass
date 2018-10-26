@@ -95,12 +95,25 @@ html, body
   vertical-align: middle
   font-size: 18px
   opacity: 0.6
+
+  @include untilpoint(desktop)
+    &.--sm
+      width: auto
+      &.--preseparator:before
+        content: "/"
+        padding: 0 0.26em
+        color: rgba(255,255,255, 0.6)
+
   @include breakpoint(desktop)
     margin-right: 30px
     padding-right: 10px
     width: auto
     opacity: 1
     font-size: 14px
+    &.--sm
+      margin-right: 10px
+      &:last-child
+        margin-right: 20px
 
 .header_menu_toggler
   position: absolute

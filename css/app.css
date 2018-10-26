@@ -255,13 +255,24 @@ html, body {
   vertical-align: middle;
   font-size: 18px;
   opacity: 0.6; }
+  @media only screen and (max-width: 1023px) {
+    .nav_item.--sm {
+      width: auto; }
+      .nav_item.--sm.--preseparator:before {
+        content: "/";
+        padding: 0 0.26em;
+        color: rgba(255, 255, 255, 0.6); } }
   @media only screen and (min-width: 1024px) {
     .nav_item {
       margin-right: 30px;
       padding-right: 10px;
       width: auto;
       opacity: 1;
-      font-size: 14px; } }
+      font-size: 14px; }
+      .nav_item.--sm {
+        margin-right: 10px; }
+        .nav_item.--sm:last-child {
+          margin-right: 20px; } }
 
 .header_menu_toggler {
   position: absolute;
