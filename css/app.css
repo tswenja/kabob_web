@@ -501,6 +501,8 @@ html, body {
     .desc_fonts {
       font-size: 18px;
       font-weight: 500; } }
+  .desc_fonts.content_max_width {
+    max-width: 800px; }
 
 /**
  *
@@ -620,14 +622,6 @@ html, body {
   .hover-card-general:hover {
     box-shadow: 0px 2px 90px rgba(0, 0, 0, 0.2); }
 
-.kabob_app {
-  width: 260px;
-  padding: 20px 10px 10px; }
-  @media only screen and (min-width: 768px) {
-    .kabob_app {
-      width: 250px;
-      padding-top: 32px; } }
-
 .kabob_app_download {
   width: 100%;
   padding: 40px 0 5px; }
@@ -637,69 +631,73 @@ html, body {
   text-align: center;
   font-weight: 500; }
 
-.product {
-  display: inline-block;
-  color: #70bdd4;
-  font-size: 14px;
-  border: 2px solid #09A8BE;
-  border-radius: 6px;
-  padding: 8px 12px;
-  text-align: center;
-  margin: 0 auto; }
-
-.platform_icon {
-  height: 100px;
-  display: block;
-  margin: auto; }
+.kabob_app {
+  width: 260px;
+  padding: 20px 10px 10px; }
   @media only screen and (min-width: 768px) {
-    .platform_icon {
-      height: 120px; } }
-
-.e_name {
-  margin-bottom: 0;
-  font-size: 32px; }
-
-.c_name {
-  font-size: 18px;
-  margin-bottom: 15px; }
-  @media only screen and (min-width: 768px) {
-    .c_name {
-      margin-bottom: 21px; } }
-
-.intro {
-  margin-bottom: 25px;
-  padding: 0 10px;
-  font-size: 13px; }
-  @media only screen and (min-width: 567px) {
-    .intro {
-      height: 54px; } }
-  @media only screen and (min-width: 768px) {
-    .intro {
-      margin-bottom: 20px; } }
-
-.more {
-  color: white;
-  font-size: 13px;
-  line-height: 18px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 48px;
-  border-radius: 10px;
-  padding: 15px 30px;
-  margin: 0 auto; }
-
-.more1 {
-  background-color: #09A8BE; }
-
-.more2 {
-  background-color: #F9AE0F; }
-
-.more3 {
-  background-color: #0F2596; }
-
-.more4 {
-  background-color: #FFDA00; }
+    .kabob_app {
+      width: 250px;
+      padding-top: 32px; } }
+  .kabob_app .product {
+    display: inline-block;
+    color: #70bdd4;
+    font-size: 14px;
+    border: 2px solid #09A8BE;
+    border-radius: 6px;
+    padding: 8px 12px;
+    text-align: center;
+    margin: 0 auto; }
+  .kabob_app .platform_icon {
+    height: 100px;
+    display: block;
+    margin: auto; }
+    @media only screen and (min-width: 768px) {
+      .kabob_app .platform_icon {
+        height: 120px; } }
+  .kabob_app .e_name {
+    margin-bottom: 0;
+    line-height: 1em;
+    font-size: 32px;
+    font-weight: 600; }
+  .kabob_app .c_name {
+    font-size: 18px;
+    margin-bottom: 15px; }
+    @media only screen and (min-width: 768px) {
+      .kabob_app .c_name {
+        margin-bottom: 21px; } }
+  .kabob_app .intro {
+    margin-bottom: 25px;
+    padding: 0 10px;
+    font-size: 13px; }
+    @media only screen and (min-width: 567px) {
+      .kabob_app .intro {
+        height: 54px; } }
+    @media only screen and (min-width: 768px) {
+      .kabob_app .intro {
+        margin-bottom: 20px; } }
+  .kabob_app .more {
+    color: white;
+    font-size: 13px;
+    line-height: 18px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin: 0 auto; }
+  .kabob_app .more1 {
+    background-color: #09A8BE; }
+  .kabob_app .more2 {
+    background-color: #F9AE0F; }
+  .kabob_app .more3 {
+    background-color: #0F2596; }
+  .kabob_app .more4 {
+    background-color: #FFDA00; }
+  .kabob_app.--en .intro {
+    height: 5.5em; }
+  .kabob_app.--en .c_name {
+    margin-bottom: 1.6em; }
 
 /**
  *

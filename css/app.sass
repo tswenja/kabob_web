@@ -347,6 +347,9 @@ $header_menu_bottom_height: 88px
     font-size: 18px
     font-weight: 500
 
+  &.content_max_width
+    max-width: 800px
+
 
 /**
  *
@@ -469,13 +472,6 @@ $header_menu_bottom_height: 88px
   &:hover
     box-shadow: 0px 2px 90px rgba(black, 0.2)
 
-.kabob_app
-  width: 260px
-  padding: 20px 10px 10px
-  @include breakpoint(md)
-    width: 250px
-    padding-top: 32px
-
 .kabob_app_download
   width: 100%
   padding: 40px 0 5px
@@ -485,65 +481,80 @@ $header_menu_bottom_height: 88px
   text-align: center
   font-weight: 500
 
-.product
-  display: inline-block
-  color: $color_blue
-  font-size: 14px
-  border: 2px solid #09A8BE
-  border-radius: 6px
-  padding: 8px 12px
-  text-align: center
-  margin: 0 auto
-
-.platform_icon
-  height: 100px
-  display: block
-  margin: auto
+.kabob_app
+  width: 260px
+  padding: 20px 10px 10px
   @include breakpoint(md)
-    height: 120px
+    width: 250px
+    padding-top: 32px
 
-.e_name
-  margin-bottom: 0
-  font-size: 32px
+  .product
+    display: inline-block
+    color: $color_blue
+    font-size: 14px
+    border: 2px solid #09A8BE
+    border-radius: 6px
+    padding: 8px 12px
+    text-align: center
+    margin: 0 auto
 
-.c_name
-  font-size: 18px
-  margin-bottom: 15px
-  @include breakpoint(md)
-    margin-bottom: 21px
+  .platform_icon
+    height: 100px
+    display: block
+    margin: auto
+    @include breakpoint(md)
+      height: 120px
 
-.intro
-  margin-bottom: 25px
-  padding: 0 10px
-  font-size: 13px
-  @include breakpoint(sm)
-    height: 54px
-  @include breakpoint(md)
-    margin-bottom: 20px
+  .e_name
+    margin-bottom: 0
+    line-height: 1em
+    font-size: 32px
+    font-weight: 600
 
-.more
-  color: white
-  font-size: 13px
-  line-height: 18px
-  position: relative
-  bottom: 0
-  width: 100%
-  height: 48px
-  border-radius: 10px
-  padding: 15px 30px
-  margin: 0 auto
+  .c_name
+    font-size: 18px
+    margin-bottom: 15px
+    @include breakpoint(md)
+      margin-bottom: 21px
 
-.more1
-  background-color: #09A8BE
+  .intro
+    margin-bottom: 25px
+    padding: 0 10px
+    font-size: 13px
+    @include breakpoint(sm)
+      height: 54px
+    @include breakpoint(md)
+      margin-bottom: 20px
 
-.more2
-  background-color: #F9AE0F
+  .more
+    color: white
+    font-size: 13px
+    line-height: 18px
+    position: relative
+    bottom: 0
+    width: 100%
+    height: 48px
+    border-radius: 10px
+    padding: 15px 30px
+    margin: 0 auto
 
-.more3
-  background-color: #0F2596
+  .more1
+    background-color: #09A8BE
 
-.more4
-  background-color: #FFDA00
+  .more2
+    background-color: #F9AE0F
+
+  .more3
+    background-color: #0F2596
+
+  .more4
+    background-color: #FFDA00
+
+  &.--en
+    .intro
+      height: 5.5em
+    .c_name
+      margin-bottom: 1.6em
 
 
 /**
