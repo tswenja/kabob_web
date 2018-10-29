@@ -814,16 +814,13 @@ $kabob_section_px: 8.6%
  * Lookr
  *
  **/
+$breakpint-kv-lookr: 1210px
+
 .logo_img.logo_img-lookr
   height: 25px
   margin-top: -3px
 
-.section-kv-lookr
-  $breakpint-kv-lookr: 1210px
-
-  min-height: 100vh
-  padding-top: $header_height + 30px
-  padding-bottom: 30px
+.kv_bg-lookr
   background: no-repeat -280px -41px
   background-image: url("../images/lookr_bg.jpg"), url("../images/lookr_bg@0.5x.jpg")
   background-size: auto 124.6%
@@ -834,6 +831,11 @@ $kabob_section_px: 8.6%
     background-position: center -51px
   @include breakpoint(2000px)
     background-size: 100% auto
+
+.section-kv-lookr
+  min-height: 100vh
+  padding-top: $header_height + 30px
+  padding-bottom: 30px
 
   .kv_desc
     width: 100%
@@ -1074,16 +1076,19 @@ $kabob_section_px: 8.6%
   &:hover, &:active, &:visited
     color: white
 
+.kv_bg-teachor
+  background: url("../images/teachor_bg.png") no-repeat left top
+  background-size: cover
+
+  @include breakpoint(md)
+    background-image: url("../images/teachor_bg@2x.png"), url("../images/teachor_bg.png")
+
 .section-kv-teachor
   $breakpoint-teachor-kv: 446px
   $teachor-kv-padding-x: 6.25%
 
   min-height: 100vh
   padding-top: 70px
-  background: url("../images/teachor_bg.png") no-repeat left top
-  background-size: cover
-  @include breakpoint(md)
-    background-image: url("../images/teachor_bg@2x.png"), url("../images/teachor_bg.png")
 
   .kv_size
     width: 100%
@@ -1243,9 +1248,12 @@ $kabob_section_px: 8.6%
 .btn-voicer
   background-color: $color-voicer
 
-.section-kv-voicer
-  background: url('../images/voicer_bg_1.png') no-repeat top center
+.kv_bg-voicer
+  background: no-repeat top center
+  background-image: url('../images/voicer_bg_1@2x.jpg'), url('../images/voicer_bg_1.jpg')
   background-size: cover
+
+.section-kv-voicer
 
   .kv_image
     max-width: 698px

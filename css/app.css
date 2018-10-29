@@ -974,21 +974,23 @@ html, body {
   height: 25px;
   margin-top: -3px; }
 
-.section-kv-lookr {
-  min-height: 100vh;
-  padding-top: 94px;
-  padding-bottom: 30px;
+.kv_bg-lookr {
   background: no-repeat -280px -41px;
   background-image: url("../images/lookr_bg.jpg"), url("../images/lookr_bg@0.5x.jpg");
   background-size: auto 124.6%; }
   @media only screen and (min-width: 1210px) {
-    .section-kv-lookr {
+    .kv_bg-lookr {
       background-image: url("../images/lookr_bg@2x.jpg"), url("../images/lookr_bg.jpg"), url("../images/lookr_bg@0.5x.jpg");
       background-size: 2000px auto;
       background-position: center -51px; } }
   @media only screen and (min-width: 2000px) {
-    .section-kv-lookr {
+    .kv_bg-lookr {
       background-size: 100% auto; } }
+
+.section-kv-lookr {
+  min-height: 100vh;
+  padding-top: 94px;
+  padding-bottom: 30px; }
   .section-kv-lookr .kv_desc {
     width: 100%;
     max-width: 578px;
@@ -1225,14 +1227,16 @@ html, body {
   .btn-teachor-dark:hover, .btn-teachor-dark:active, .btn-teachor-dark:visited {
     color: white; }
 
-.section-kv-teachor {
-  min-height: 100vh;
-  padding-top: 70px;
+.kv_bg-teachor {
   background: url("../images/teachor_bg.png") no-repeat left top;
   background-size: cover; }
   @media only screen and (min-width: 768px) {
-    .section-kv-teachor {
+    .kv_bg-teachor {
       background-image: url("../images/teachor_bg@2x.png"), url("../images/teachor_bg.png"); } }
+
+.section-kv-teachor {
+  min-height: 100vh;
+  padding-top: 70px; }
   .section-kv-teachor .kv_size {
     width: 100%;
     max-width: 739px;
@@ -1380,16 +1384,18 @@ html, body {
 .btn-voicer {
   background-color: #f9ae0f; }
 
-.section-kv-voicer {
-  background: url("../images/voicer_bg_1.png") no-repeat top center;
+.kv_bg-voicer {
+  background: no-repeat top center;
+  background-image: url("../images/voicer_bg_1@2x.jpg"), url("../images/voicer_bg_1.jpg");
   background-size: cover; }
+
+.section-kv-voicer .kv_image {
+  max-width: 698px; }
+@media only screen and (min-width: 768px) {
+  .section-kv-voicer .kv_desc {
+    width: 42%; }
   .section-kv-voicer .kv_image {
-    max-width: 698px; }
-  @media only screen and (min-width: 768px) {
-    .section-kv-voicer .kv_desc {
-      width: 42%; }
-    .section-kv-voicer .kv_image {
-      width: 58%; } }
+    width: 58%; } }
 
 .voicer_bg-light {
   background: #f5f3f0;
