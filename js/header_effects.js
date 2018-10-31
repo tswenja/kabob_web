@@ -24,18 +24,20 @@ $( '.ha-waypoint' ).each( function(i) {
 
 
 // mobilemenu
-if (window.AOS) {
-  var offset = 88;
-  if (window.innerWidth >= 768) offset = 120;
-  AOS.init({
-    easing: 'ease-in-out-sine',
-    offset: offset
-  });
-}
-
 $(window).ready(function(){
   $.mobilemenu({
     container: 'body',
     trigger: '.mobilemenu-trigger button.trigger'
   });
+});
+
+window.addEventListener('load', function(){
+  if (window.AOS) {
+    var offset = Math.floor(window.innerHeight * 0.2);
+    if (window.innerWidth >= 768) offset = Math.floor(window.innerHeight * 0.25);
+    AOS.init({
+      easing: 'ease-in-out-sine',
+      offset: offset
+    });
+  }
 });
