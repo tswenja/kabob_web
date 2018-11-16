@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <meta content='IE=edge' http-equiv=X-UA-Compatible>
+  <title>Kabob マニュアル</title>
+  <meta content='width=device-width, initial-scale=1, user-scalable=no' name=viewport>
+
+  <link href="../css/reset.css" rel="stylesheet"/>
+  <link href="../vendor/bootstrap-4.1.3-dist/css/bootstrap.min.css" rel=stylesheet />
+  <link href="../vendor/aos-master/dist/aos.css" rel=stylesheet />
+  <link href="../css/app.css" rel=stylesheet />
+  <link href="../css/header_effects.css" rel=stylesheet />
+  <link href="../css/policy.css" rel=stylesheet />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="../vendor/js/parallax.min.js"></script>
+
+  <script src="../vendor/HeaderEffects/js/waypoints.min.js"></script>
+
+  <!-- sidebar -->
+  <link rel="stylesheet" href="../vendor/sidebar/css/jquery.mobilemenu.css">
+  <script id="mobilemenu" src="../vendor/sidebar/js/jquery.mobilemenu.js"></script>
+
+  <!-- webpage components -->
+  <link rel="import" type="text/html" href="footer.html"/>
+
+</head>
+<body>
+  <header>
+    <div class="header-effects"><div class="header header-light">
+
+      <div class="headbar">
+        <div class="h-100 d-flex align-items-center">
+          <img class="logo_img" src="../images/kabob_logo_dark.svg" alt="Lookr" />
+          <button type="button" class="btn btn-link d-lg-block d-none">
+            <img class="products_img" src="../images/products_icon_dark.svg" alt="kabob products" />
+          </button>
+
+          <div class="ml-auto">
+            <div class="mobilemenu-trigger ml-auto">
+              <button class="trigger">
+                <span class="box">
+                  <span class="bar top"></span>
+                  <span class="bar middle"></span>
+                  <span class="bar bottom"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobilemenu" class="mobilemenu_override">
+        <div class="mobilemenu-wrapper">
+          <div class="mobilemenu-view _bottom_div_padding">
+            <nav class="header_menu_style d-flex align-items-center justify-content-end">
+              <ul class="w-100">
+                <li class="nav_item">
+                  <a href="#" class="text-dark hover-fade-in">ニュース</a>
+                </li>
+                <li class="nav_item">
+                  <a href="index.html#products" class="text-dark hover-fade-in">製品</a>
+                </li>
+                <li class="nav_item desktop-only">
+                  <a href="" class="btn text-white mx-2 header_button-md button-gray hover-lighter">サービス使用開始</a>
+                </li>
+                <li class="nav_item --sm">
+                    <a href="#" class="text-dark hover-fade-in">登録</a>
+                </li>
+                <li class="nav_item --sm --preseparator">
+                  <a href="#" class="text-dark hover-fade-in">ログイン</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="mobile-only mobilemenu-bottom d-flex align-items-center">
+            <div class="i18n_selector -dark">
+              <select class="select">
+                <option value="tw">繁體中文</option>
+                <option value="cn">简体中文</option>
+                <!--
+                <option value="en">English</option>
+                <option value="jp">日本语</option>
+                -->
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div></div>
+  </header>
+
+  <main class="main">
+    <div class="article">
+      <h1 class="title_fonts mb-40px">
+        マニュアル
+      </h1>
+
+      <ul class="row">
+        <li class="col-12 col-sm-4 mb-10px">
+          <a href="Lookr(Run)_Manuel.pdf" target="_blank" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card card-general text-center kabob_app_download hover-card-general">
+              <div class="kabob_app_icon">
+                <img class="img-fluid" src="../images/lookr_app_icon.svg" alt="Lookr"/>
+              </div>
+              <h5 class="kabob_app_title">Lookr</h5>
+              <button class="btn btn-link">
+                <i class="icon icon-download-circle-blue"></i>
+              </button>
+            </div>
+          </a>
+        </li>
+
+        <li class="col-12 col-sm-4 mb-10px">
+          <a href="Teachor_Manuel.pdf" target="_blank" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card card-general text-center kabob_app_download hover-card-general">
+              <div class="kabob_app_icon">
+                <img class="img-fluid" src="../images/teachor_icon-circle.svg" alt="Teachor"/>
+              </div>
+              <h5 class="kabob_app_title">Teachor</h5>
+              <button class="btn btn-link">
+                <i class="icon icon-download-circle-teachor"></i>
+              </button>
+            </div>
+          </a>
+        </li>
+
+        <li class="col-12 col-sm-4 mb-10px">
+          <a href="Voicer_Manuel.pdf" target="_blank" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card card-general text-center kabob_app_download hover-card-general">
+              <div class="kabob_app_icon">
+                <img class="img-fluid" src="../images/voicer_icon-circle.svg" alt="Voicer"/>
+              </div>
+              <h5 class="kabob_app_title">Voicer</h5>
+              <button class="btn btn-link">
+                <i class="icon icon-download-circle-voicer"></i>
+              </button>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+  </main>
+
+  <footer>
+  </footer>
+
+  <script src="../js/components_import.js"></script>
+  <script src="../vendor/aos-master/dist/aos.js"></script>
+  <script src="../js/header_effects.js"></script>
+  <script src="../js/i18n_selector.js"></script>
+  <script>
+    // Move footer to the bottom of window if the body height < window height.
+    window.addEventListener("load", function(event) {
+      var footer = document.querySelector('footer');
+      footer.style.transform = "translateY(" + Math.max(0, window.innerHeight - document.body.clientHeight) + "px)";
+    });
+  </script>
+</body>
+</html>
