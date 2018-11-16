@@ -1,4 +1,4 @@
-(function() {
+var initI18n = function() {
   // Set current locale value.
   document.querySelectorAll('.i18n_selector > select > option').forEach(function(option) {
     if (location.pathname.indexOf('/'+ option.value +'/') >= 0) {
@@ -20,4 +20,4 @@
       location = hostName + webRootPath + locale + '/' + currentPathNodes.slice(-1);
     };
   });
-})();
+};
