@@ -758,6 +758,11 @@ html, body {
         padding-left: 8%;
         text-align: left;
         vertical-align: top; } }
+  .section-kv-kabob .kv_fonts-subtitle {
+    font-size: 14px; }
+    @media only screen and (min-width: 768px) {
+      .section-kv-kabob .kv_fonts-subtitle {
+        font-size: 16px; } }
   .section-kv-kabob .kv_images {
     display: inline-block;
     margin-left: 17.1875%;
