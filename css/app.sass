@@ -615,7 +615,7 @@ $kabob_section_px: 8.6%
     text-align: center
     @include breakpoint(lg)
       margin-top: 5%
-      margin-bottom: 5%
+      margin-bottom: 15%
       width: 540px
       height: 100%
       padding-left: 8%
@@ -699,16 +699,23 @@ $kabob_section_px: 8.6%
     min-width: 70px
 
 .kabob_feature_title
-  ._fonts
+  &._fonts
     font-size: 16px
     @include breakpoint(md)
-      font-size: 12px
+      font-size: 18px
+  &.--en
+    font-weight: 600
 
 .kabob_feature_desc
-  ._fonts
-    font-size: 18px
+  &._fonts
+    font-size: 11px
     @include breakpoint(md)
       font-size: 13px
+  &.--en
+    line-height: 1.25
+    font-size: 12px
+    @include breakpoint(md)
+      font-size: 14px
 
 .kabob_video_section
   height: 300px

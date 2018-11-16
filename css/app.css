@@ -752,7 +752,7 @@ html, body {
     @media only screen and (min-width: 992px) {
       .section-kv-kabob .kv_desc {
         margin-top: 5%;
-        margin-bottom: 5%;
+        margin-bottom: 15%;
         width: 540px;
         height: 100%;
         padding-left: 8%;
@@ -836,17 +836,25 @@ html, body {
       width: 70px;
       min-width: 70px; } }
 
-.kabob_feature_title ._fonts {
+.kabob_feature_title._fonts {
   font-size: 16px; }
   @media only screen and (min-width: 768px) {
-    .kabob_feature_title ._fonts {
-      font-size: 12px; } }
+    .kabob_feature_title._fonts {
+      font-size: 18px; } }
+.kabob_feature_title.--en {
+  font-weight: 600; }
 
-.kabob_feature_desc ._fonts {
-  font-size: 18px; }
+.kabob_feature_desc._fonts {
+  font-size: 11px; }
   @media only screen and (min-width: 768px) {
-    .kabob_feature_desc ._fonts {
+    .kabob_feature_desc._fonts {
       font-size: 13px; } }
+.kabob_feature_desc.--en {
+  line-height: 1.25;
+  font-size: 12px; }
+  @media only screen and (min-width: 768px) {
+    .kabob_feature_desc.--en {
+      font-size: 14px; } }
 
 .kabob_video_section {
   height: 300px; }
