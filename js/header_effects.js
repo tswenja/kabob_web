@@ -36,6 +36,10 @@ document.querySelector('link[rel="import"][href="header.html"]').onload = functi
   initI18n();
 }
 
+document.querySelector('link[rel="import"][href="footer.html"]').onload = function() {
+  initI18n();
+}
+
 window.addEventListener('load', function(){
   if (window.AOS) {
     var offset = Math.floor(window.innerHeight * 0.2);
