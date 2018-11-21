@@ -2,42 +2,46 @@ $(window).ready(function(){
 });
 
 
-document.querySelector('link[rel="import"][href="header.html"]').onload = function() {
-  // mobilemenu
-  $.mobilemenu({
-    container: 'body',
-    trigger: '.mobilemenu-trigger button.trigger'
-  });
+if (document.querySelector('link[rel="import"][href="header.html"]')) {
+  document.querySelector('link[rel="import"][href="header.html"]').onload = function() {
+    // mobilemenu
+    $.mobilemenu({
+      container: 'body',
+      trigger: '.mobilemenu-trigger button.trigger'
+    });
 
-  $( '.ha-waypoint' ).each( function(i) {
-    var $el = $( this ),
-      animClassDown = $el.data( 'animateDown' ),
-      animClassUp = $el.data( 'animateUp' );
+    $( '.ha-waypoint' ).each( function(i) {
+      var $el = $( this ),
+        animClassDown = $el.data( 'animateDown' ),
+        animClassUp = $el.data( 'animateUp' );
 
-    $el.waypoint( function( direction ) {
-      var $head = $( '.header-effects' );
-      if ( $('.mobilemenu-trigger button.trigger.active').length > 0 ) return;
+      $el.waypoint( function( direction ) {
+        var $head = $( '.header-effects' );
+        if ( $('.mobilemenu-trigger button.trigger.active').length > 0 ) return;
 
-      if( direction === 'down' && animClassDown ) {
-        if ( animClassDown === 'none' )
-          $head.attr('class', "header-effects");
-        else
-          $head.attr('class', "header-effects header-effects-on " + animClassDown);
-      }
-      else if( direction === 'up' && animClassUp ){
-        if ( animClassUp === 'none' )
-          $head.attr('class', "header-effects");
-        else
-          $head.attr('class', "header-effects header-effects-on " + animClassUp);
-      }
-    }, { offset: '100%' } );
-  } );
+        if( direction === 'down' && animClassDown ) {
+          if ( animClassDown === 'none' )
+            $head.attr('class', "header-effects");
+          else
+            $head.attr('class', "header-effects header-effects-on " + animClassDown);
+        }
+        else if( direction === 'up' && animClassUp ){
+          if ( animClassUp === 'none' )
+            $head.attr('class', "header-effects");
+          else
+            $head.attr('class', "header-effects header-effects-on " + animClassUp);
+        }
+      }, { offset: '100%' } );
+    } );
 
-  initI18n();
+    initI18n();
+  }
 }
 
-document.querySelector('link[rel="import"][href="footer.html"]').onload = function() {
-  initI18n();
+if (document.querySelector('link[rel="import"][href="footer.html"]')) {
+  document.querySelector('link[rel="import"][href="footer.html"]').onload = function() {
+    initI18n();
+  }
 }
 
 window.addEventListener('load', function(){
