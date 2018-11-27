@@ -1,9 +1,57 @@
+.nav_item
+  display: inline-block
+  margin-top: 12px
+  width: 100%
+  padding-bottom: 12px
+  vertical-align: middle
+  font-size: 18px
+  opacity: 0.6
+
+  & > a
+    color: #ffffff
+    &:hover, &:active, &:visited, &:focus
+      color: #ffffff
+
+  @include untilpoint(desktop)
+    &.--sm
+      width: auto
+    &.--preseparator:before
+      content: "/"
+      padding: 0 0.26em
+      color: rgba(255,255,255, 0.6)
+
+  @include breakpoint(desktop)
+    margin-right: 30px
+    padding-right: 10px
+    width: auto
+    opacity: 1
+    font-size: 14px
+    &.--sm
+      margin-right: 10px
+      &:last-child
+        margin-right: 20px
+
 .header-kabob
   .header_switch:not(.header_case-kabob)
     display: none
 
   .header_button-default
     background-color: rgba(255, 255, 255, 0.2)
+
+.header-kabob-light
+  .header_switch:not(.header_case-kabob-light)
+    display: none
+
+  .header_button-default
+    background-color: rgba(0, 0, 0, 0.2)
+
+  .nav_item
+    & > a
+      color: #3b3e49
+      &:hover, &:active, &:visited, &:focus
+        color: #3b3e49
+    &.--preseparator:before
+      color: rgba(0,0,0, 0.6)
 
 .header-lookr
   .header_switch:not(.header_case-lookr)

@@ -71,19 +71,19 @@ html,body {
   color: #70bdd4;
 }
 
-.header-effects-on .header-light .headbar,
-.mobilemenu-active .header-light .headbar {
+.header-kabob-light .header-effects-on .headbar,
+.mobilemenu-active.header-kabob-light .headbar {
   background-color: #ffffff;
 }
 @media only screen and (max-width: 1023px) {
-  .header-light .mobilemenu-trigger > .trigger > .box > .bar,
-  .header-light .mobilemenu-trigger > .trigger.active > .box > .bar {
+  .header-kabob-light .mobilemenu-trigger > .trigger > .box > .bar,
+  .header-kabob-light .mobilemenu-trigger > .trigger.active > .box > .bar {
     background-color: #3b3e49;
   }
-  .header-light #mobilemenu.mobilemenu_override {
+  .header-kabob-light #mobilemenu.mobilemenu_override {
     background-color: #ffffff;
   }
-    .header-light #mobilemenu.mobilemenu_override .mobilemenu-bottom {
+    .header-kabob-light #mobilemenu.mobilemenu_override .mobilemenu-bottom {
       background-color: #ffffff;
     }
 }

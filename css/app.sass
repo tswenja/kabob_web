@@ -87,34 +87,6 @@ html, body
     padding-top: 0
     text-align: right
 
-.nav_item
-  display: inline-block
-  margin-top: 12px
-  width: 100%
-  padding-bottom: 12px
-  vertical-align: middle
-  font-size: 18px
-  opacity: 0.6
-
-  @include untilpoint(desktop)
-    &.--sm
-      width: auto
-      &.--preseparator:before
-        content: "/"
-        padding: 0 0.26em
-        color: rgba(255,255,255, 0.6)
-
-  @include breakpoint(desktop)
-    margin-right: 30px
-    padding-right: 10px
-    width: auto
-    opacity: 1
-    font-size: 14px
-    &.--sm
-      margin-right: 10px
-      &:last-child
-        margin-right: 20px
-
 .header_menu_toggler
   position: absolute
   top: 0
@@ -466,7 +438,7 @@ $header_menu_bottom_height: 88px
     padding-right: 2em
     cursor: pointer
 
-.i18n_selector.-dark
+.header-kabob-light .i18n_selector, .i18n_selector.-dark
   color: #3b3e49
   &::before
     background-image: url('../images/icon-language-dark@2x.png')
