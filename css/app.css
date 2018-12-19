@@ -629,11 +629,11 @@ html, body {
     padding-right: 2em;
     cursor: pointer; }
 
-.header-kabob-light .i18n_selector, .i18n_selector.-dark {
+.header-kabob-light .header .i18n_selector, .i18n_selector.-dark {
   color: #3b3e49; }
-  .header-kabob-light .i18n_selector::before, .i18n_selector.-dark::before {
+  .header-kabob-light .header .i18n_selector::before, .i18n_selector.-dark::before {
     background-image: url("../images/icon-language-dark@2x.png"); }
-  .header-kabob-light .i18n_selector::after, .i18n_selector.-dark::after {
+  .header-kabob-light .header .i18n_selector::after, .i18n_selector.-dark::after {
     background-image: url("../images/icon-dropdown-dark@2x.png"); }
 
 .card-general {
