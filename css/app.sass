@@ -211,9 +211,18 @@ $header_menu_bottom_height: 88px
 .style-teachor .footer_bg
   background-color: #7280c8
 
+.footer_nav_fonts
+  font-size: 13px
+
 .copyright_fonts
   font-size: 12px
   letter-spacing: 0.026em
+
+.button-footer-contact
+  width: 100%
+  max-width: 250px
+  @include breakpoint(sm)
+    width: auto
 
 
 .h3_mb
@@ -436,6 +445,7 @@ $header_menu_bottom_height: 88px
     outline: none
     color: inherit
     padding-right: 2em
+    position: relative
     cursor: pointer
 
 .header-kabob-light .header .i18n_selector, .i18n_selector.-dark
@@ -444,6 +454,13 @@ $header_menu_bottom_height: 88px
     background-image: url('../images/icon-language-dark@2x.png')
   &::after
     background-image: url('../images/icon-dropdown-dark@2x.png')
+
+.footer .i18n_selector
+  font-size: 12px
+
+  &::before
+    margin-right: 6px
+    background-size: 15px 15px
 
 
 .card-general

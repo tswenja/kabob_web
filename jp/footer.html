@@ -1,37 +1,43 @@
 <template for="footer">
   <div class="footer footer_bg">
-    <div class="mb-5 pb-2 mb-md-3 pb-md-1">
-      <a href="index.html"><img src="../images/kabob_logo.svg" class="float-left"></a>
+    <div class="mb-5 mb-sm-4 pb-sm-2">
+      <a href="index.html"><img src="../images/kabob_logo.svg" class="float-sm-left"></a>
 
-      <ul class="text-right">
-        <li class="mb-3 mb-md-0 d-md-inline-block ml-md-4 pl-md-1">
+      <ul class="text-sm-right mt-5 mt-sm-0 footer_nav_fonts">
+        <li class="mb-3 mb-sm-0 d-sm-inline-block ml-sm-4 pl-sm-1">
           <a href="#" class="link-white hover-fade-in">お問い合わせ</a>
         </li>
-        <li class="mb-3 mb-md-0 d-md-inline-block ml-md-4 pl-md-1">
+        <li class="mb-3 mb-sm-0 d-sm-inline-block ml-sm-4 pl-sm-1">
           <a href="document.html" class="link-white hover-fade-in">マニュアル</a>
         </li>
-        <li class="mb-3 mb-md-0 d-md-inline-block ml-md-4 pl-md-1">
+        <li class="mb-3 mb-sm-0 d-sm-inline-block ml-sm-4 pl-sm-1">
           <a href="privacy_policy.html" class="link-white hover-fade-in">プライバシーポリシー</a>
         </li>
-        <li class="d-md-inline-block ml-md-4 pl-md-1">
+        <li class="d-sm-inline-block ml-sm-4 pl-sm-1">
           <a href="service_policy.html" class="link-white hover-fade-in">サービス条約</a>
         </li>
       </ul>
     </div>
 
-    <div class="text-right mb-3 pb-md-2">
-      <a href="tel:" class="icon icon-circle hover-lighter mr-10px">
-        <image src="../images/call_btn.svg">
+    <div class="d-flex flex-wrap mb-4 mb-sm-2 pb-sm-2">
+      <a href="tel:886-2-8773-5515" class="button-white button-round hover-lighter mb-10px mx-auto mr-sm-2 button-footer-contact">
+        <span class="h-100 d-flex align-items-center justify-content-center mx-3 pr-4 pr-sm-0">
+          <i class="icon icon-phone mr-10px"></i>
+          <small class="mx-auto mr-sm-1">886-2-8773-5515</small>
+        </span>
       </a>
-      <a href="mailto:hello@kabob.cc" class="icon icon-circle hover-lighter">
-        <image src="../images/mail_btn.svg">
+      <a href="mailto:hello@kabob.cc" class="button-white button-round hover-lighter mb-10px mx-auto ml-sm-1 mr-sm-0 button-footer-contact">
+        <span class="h-100 d-flex align-items-center justify-content-center mx-3 pr-4 pr-sm-0">
+          <i class="icon icon-mail mr-10px"></i>
+          <small class="mx-auto mr-sm-1">hello@kabob.cc</small>
+        </span>
       </a>
     </div>
 
     <div class="d-flex">
       <div class="desktop-only header_menu_bottom d-flex align-items-center">
-        <div class="i18n_selector">
-          <select class="select hover-fade-in">
+        <div class="i18n_selector hover-fade-in">
+          <select class="select">
             <option value="tw">繁體中文</option>
             <option value="cn">简体中文</option>
             <option value="en">English</option>
@@ -40,7 +46,7 @@
         </div>
       </div>
 
-      <div class="copyright_fonts text-white ml-auto">
+      <div class="copyright_fonts text-white mx-auto mr-sm-0">
         2017 Copyright of Kabob Creative Co. Limited
       </div>
     </div>
