@@ -66,7 +66,7 @@ button {
 
 .button-round {
   display: inline-block;
-  height: 40px;
+  height: 36px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
@@ -180,28 +180,30 @@ button {
 
 .icon-mail {
   width: 17px;
-  height: 12px;
+  height: 13px;
   background-image: url(../images/icon-mail@2x.png); }
 
 .nav_item {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 10px;
   width: 100%;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
   vertical-align: middle;
-  font-size: 18px;
+  font-size: 14px;
   opacity: 0.6; }
   .nav_item > a {
     color: #ffffff; }
     .nav_item > a:hover, .nav_item > a:active, .nav_item > a:visited, .nav_item > a:focus {
       color: #ffffff; }
   @media only screen and (max-width: 1023px) {
-    .nav_item.--sm {
-      width: auto; }
-    .nav_item.--preseparator:before {
-      content: "/";
-      padding: 0 0.26em;
-      color: rgba(255, 255, 255, 0.6); } }
+    .nav_item {
+      font-size: 16px; }
+      .nav_item.--sm {
+        width: auto; }
+      .nav_item.--preseparator:before {
+        content: "/";
+        padding: 0 0.26em;
+        color: rgba(255, 255, 255, 0.6); } }
   @media only screen and (min-width: 1024px) {
     .nav_item {
       margin-right: 30px;
@@ -398,12 +400,13 @@ html, body {
     #mobilemenu.mobilemenu_override .mobilemenu-view {
       overflow-y: auto; }
     #mobilemenu.mobilemenu_override ._bottom_div_padding {
-      padding-bottom: 88px;
-      margin-bottom: -88px; }
+      padding-bottom: 170px;
+      margin-bottom: -170px; }
     #mobilemenu.mobilemenu_override .mobilemenu-bottom {
       position: relative;
       z-index: 2;
-      height: 88px;
+      height: 170px;
+      padding-top: 10px;
       background-color: #292929; } }
 @media only screen and (min-width: 1024px) {
   #mobilemenu.mobilemenu_override {

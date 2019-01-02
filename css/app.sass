@@ -162,7 +162,7 @@ html, body
     display: none
 
 
-$header_menu_bottom_height: 88px
+$header_menu_bottom_height: 170px
 #mobilemenu.mobilemenu_override
   @include untilpoint(desktop)
     height: auto
@@ -184,6 +184,7 @@ $header_menu_bottom_height: 88px
       position: relative
       z-index: 2
       height: $header_menu_bottom_height
+      padding-top: 10px
       background-color: $color-nav-bg
 
   @include breakpoint(desktop)
